@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/1. HelloWorld/1. HelloWorld.iml" filepath="$PROJECT_DIR$/1. HelloWorld/1. HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HA-Datentypen+Variablen/A3-Kalkulator/A3-Kalkulator.iml" filepath="$PROJECT_DIR$/HA-Datentypen+Variablen/A3-Kalkulator/A3-Kalkulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/EinfacherRechner/EinfacherRechner.iml" filepath="$PROJECT_DIR$/EinfacherRechner/EinfacherRechner.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HA - Datentypen und Variablen/HA - Datentypen und Variablen.iml" filepath="$PROJECT_DIR$/HA - Datentypen und Variablen/HA - Datentypen und Variablen.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Info_SII_Java.iml" filepath="$PROJECT_DIR$/.idea/Info_SII_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Scanner-Programme/Scanner-Programme.iml" filepath="$PROJECT_DIR$/Scanner-Programme/Scanner-Programme.iml" />
     </modules>
   </component>
 </project>
