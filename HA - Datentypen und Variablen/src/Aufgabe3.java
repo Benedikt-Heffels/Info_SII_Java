@@ -18,7 +18,7 @@ public class Aufgabe3 {
         String druckwunsch = scan.nextLine();
         if(druckwunsch.equals("Ja")) {
             System.out.println("Hier ist die Rechnung");
-            System.out.println("----Sie können auf diese Funktion leider noch nicht zugreifen. Dafür wird das Pro-Abo benötigt.");
+            System.out.println("---- Sie können auf diese Funktion leider noch nicht zugreifen. Dafür wird das Pro-Abo benötigt. ----");
         }
         else{
             System.out.println("In Ordnung, fügen Sie die Werte in ihre eigene Rechnung ein.");
