@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Aufgabe3 {
+public class Aufgabe3_Kalkulation {
     public static void main(String[] args) {
         System.out.println("Bitte geben Sie den Einkaufspreis ein:");
         Scanner eingabe = new Scanner(System.in);

@@ -3,12 +3,18 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1. HelloWorld/1. HelloWorld.iml" filepath="$PROJECT_DIR$/1. HelloWorld/1. HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4. Verzweigungen und Schleifen/1. Verzweigungen/1. Verzweigungen.iml" filepath="$PROJECT_DIR$/4. Verzweigungen und Schleifen/1. Verzweigungen/1. Verzweigungen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1.1 Einfacher Rechner/1.1 Einfacher Rechner.iml" filepath="$PROJECT_DIR$/1.1 Einfacher Rechner/1.1 Einfacher Rechner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2. Datentypen und Variablen/2. Datentypen und Variablen.iml" filepath="$PROJECT_DIR$/2. Datentypen und Variablen/2. Datentypen und Variablen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4. Verzweigungen und Schleifen/2. Schleifen/2. Schleifen.iml" filepath="$PROJECT_DIR$/4. Verzweigungen und Schleifen/2. Schleifen/2. Schleifen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3. Scanner/3. Scanner.iml" filepath="$PROJECT_DIR$/3. Scanner/3. Scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4. Verzweigungen und Schleifen/4. Verzweigungen und Schleifen.iml" filepath="$PROJECT_DIR$/4. Verzweigungen und Schleifen/4. Verzweigungen und Schleifen.iml" />
       <module fileurl="file://$PROJECT_DIR$/HA-Datentypen+Variablen/A3-Kalkulator/A3-Kalkulator.iml" filepath="$PROJECT_DIR$/HA-Datentypen+Variablen/A3-Kalkulator/A3-Kalkulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/HA - Datentypen und Variablen/AuswertungvonAusdruecken/AuswertungvonAusdruecken.iml" filepath="$PROJECT_DIR$/HA - Datentypen und Variablen/AuswertungvonAusdruecken/AuswertungvonAusdruecken.iml" />
       <module fileurl="file://$PROJECT_DIR$/EinfacherRechner/EinfacherRechner.iml" filepath="$PROJECT_DIR$/EinfacherRechner/EinfacherRechner.iml" />
       <module fileurl="file://$PROJECT_DIR$/HA - Datentypen und Variablen/HA - Datentypen und Variablen.iml" filepath="$PROJECT_DIR$/HA - Datentypen und Variablen/HA - Datentypen und Variablen.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Info_SII_Java.iml" filepath="$PROJECT_DIR$/.idea/Info_SII_Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Scanner-Programme/Scanner-Programme.iml" filepath="$PROJECT_DIR$/Scanner-Programme/Scanner-Programme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/X. Codeexperimente/X. Codeexperimente.iml" filepath="$PROJECT_DIR$/X. Codeexperimente/X. Codeexperimente.iml" />
     </modules>
   </component>
 </project>

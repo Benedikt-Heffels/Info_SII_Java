@@ -14,9 +14,8 @@ public class NetManBot {
                         "Aber bitte überlasse die Informatik doch den Erwachsenen!\n" +
                         "Was sollten uns deine Interessen interessieren, du zahlst ja immerhin nicht?\n" +
                         "Verpiss dich!");
-                System.exit(0);
+                System.exit(1);
             }
         }
-
     }
 }
