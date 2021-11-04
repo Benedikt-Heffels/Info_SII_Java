@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BiggestNumberBen{
+public class Aufgabe1Verbessert {
     public static void main(String[] args) {
         System.out.println("Bitte geben Sie Ihre erste Zahl ein:");
         Scanner eingabe = new Scanner(System.in);
