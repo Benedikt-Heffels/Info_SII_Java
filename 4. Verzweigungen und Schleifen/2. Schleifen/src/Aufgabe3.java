@@ -7,7 +7,7 @@ public class Aufgabe3 {
         int eingabe = scan.nextInt();
         int endergebnis = 0;
         for (int addifaktor = 0; addifaktor < eingabe; addifaktor++) {
-            endergebnis = eingabe + addifaktor;
+            endergebnis += addifaktor;
         }
         System.out.println(endergebnis);
     }
