@@ -8,7 +8,7 @@ public class StadtLandFlussNew {
         System.out.println("Mit wie vielen Spielern wollt ihr spielen (2-5)?");
         Scanner allgeingaben = new Scanner(System.in);
         int anzahlplayer = allgeingaben.nextInt();
-        System.out.println("Wie viele Runden wollt ihr spielen?");
+        System.out.println("Wie viele Runden wollt ihr spielen? (1-3)");
         int anzahlrunden = allgeingaben.nextInt();
         System.out.println("Es gibt folgende Kategorien: Stadt - Land - Fluss - Tier - Pflanze - Spiel.");
 
@@ -17,9 +17,32 @@ public class StadtLandFlussNew {
         String[] ep3 = {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel"};
         String[] ep4 = {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel"};
         String[] ep5 = {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel"};
+        String round1[][] = {
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+        };
+        String round2[][]= {
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+        };
+        String round3 [][] = {
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+                {"Stadt", "Land", "Fluss", "Tier", "Pflanze", "Spiel", "Ergebnis"},
+        };
         Scanner spieleingaben = new Scanner(System.in);
         Random randomwert = new Random();
-        // Spiel
+
+
+        // ----------------------------------------- Spiel --------------------------------------------------------------
         int durchlaufenerunden = 1;
         while (durchlaufenerunden <= anzahlrunden) {
             char buchstabe = (char) (randomwert.nextInt(26) + 'A');
@@ -107,31 +130,99 @@ public class StadtLandFlussNew {
                         break;
                 }
             }
-            // Ausgabe der Eingaben
-            System.out.println("\nSpieler 1:");
-            for(int ausgaben = 0; ausgaben <= 5; ausgaben++) {
-                System.out.print(ep1[ausgaben] + " - ");
+
+            // Eingabe-Arrays werden in RUnden-Arrays übertragen (+theoretische Ausgabe, derzeit auskommentiert)
+            if (anzahlplayer >= 1) {
+                System.out.println("\nSpieler 1:");
+                for (int ausgaben = 0; ausgaben <= 5; ausgaben++) {
+                    //System.out.print(ep1[ausgaben] + " - ");
+                    switch (durchlaufenerunden) {
+                        case 1:
+                            round1[0][ausgaben] = ep1[ausgaben];
+                            break;
+                        case 2:
+                            round2[0][ausgaben] = ep1[ausgaben];
+                            break;
+                        case 3:
+                            round3[0][ausgaben] = ep1[ausgaben];
+                            break;
+                    }
+                }
             }
-            System.out.println("\nSpieler 2:");
-            for(int ausgaben = 0; ausgaben <= 5; ausgaben++) {
-                System.out.print(ep2[ausgaben] + " - ");
+            if (anzahlplayer >= 2) {
+                System.out.println("\nSpieler 2:");
+                for (int ausgaben = 0; ausgaben <= 5; ausgaben++) {
+                    //System.out.print(ep2[ausgaben] + " - ");
+                    switch (durchlaufenerunden) {
+                        case 1:
+                            round1[1][ausgaben] = ep2[ausgaben];
+                            break;
+                        case 2:
+                            round2[1][ausgaben] = ep2[ausgaben];
+                            break;
+                        case 3:
+                            round3[1][ausgaben] = ep2[ausgaben];
+                            break;
+                    }
+                }
             }
             if(anzahlplayer >= 3){
                 System.out.println("\nSpieler 3:");
                 for(int ausgaben = 0; ausgaben <= 5; ausgaben++) {
-                    System.out.print(ep3[ausgaben] + " - ");
+                    //System.out.print(ep3[ausgaben] + " - ");
+                    switch (durchlaufenerunden) {
+                        case 1:
+                            round1[2][ausgaben] = ep3[ausgaben];
+                            break;
+                        case 2:
+                            round2[2][ausgaben] = ep3[ausgaben];
+                            break;
+                        case 3:
+                            round3[2][ausgaben] = ep3[ausgaben];
+                            break;
+                    }
                 }
             }
             if (anzahlplayer >= 4) {
                 System.out.println("\nSpieler 4:");
                 for(int ausgaben = 0; ausgaben <= 5; ausgaben++) {
-                    System.out.print(ep4[ausgaben] + " - ");
+                    //System.out.print(ep4[ausgaben] + " - ");
+                    switch (durchlaufenerunden) {
+                        case 1:
+                            round1[3][ausgaben] = ep4[ausgaben];
+                            break;
+                        case 2:
+                            round2[3][ausgaben] = ep4[ausgaben];
+                            break;
+                        case 3:
+                            round3[3][ausgaben] = ep4[ausgaben];
+                            break;
+                    }
                 }
             }
             if (anzahlplayer >= 5) {
                 System.out.println("\nSpieler 5:");
                 for(int ausgaben = 0; ausgaben <= 5; ausgaben++) {
-                    System.out.print(ep5[ausgaben] + " - ");
+                    //System.out.print(ep5[ausgaben] + " - ");
+                    switch (durchlaufenerunden) {
+                        case 1:
+                            round1[4][ausgaben] = ep5[ausgaben];
+                            break;
+                        case 2:
+                            round2[4][ausgaben] = ep5[ausgaben];
+                            break;
+                        case 3:
+                            round3[4][ausgaben] = ep5[ausgaben];
+                            break;
+                    }
+                }
+            }
+
+            // Punktebewertung
+            for(int element = 0; element <= 5; element++){
+                switch (durchlaufenerunden) {
+                    case 1: // Erste Runde
+
                 }
             }
             durchlaufenerunden += 1;
