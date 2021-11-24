@@ -48,7 +48,7 @@ public class NamenWuerfel {
                 System.out.println("Passwort und/oder Benutzername falsch!");
             }
         }
-        gueltigeListe = "kurse" + gueltigerBN; // Update required!
+        // gueltigeListe = "kurse" + gueltigerBN; // Update required!
         boolean waehlen = true;
 
         int fachposition = 0;
