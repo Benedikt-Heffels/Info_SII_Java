@@ -1,5 +1,4 @@
-// TO-DO: String in Array-Namen umwandeln!
-// Idee: Array mit allen Kursen, Array mit zuordnung Benutzername - kurse
+// To-Do: Warnung, wenn Liste fast leer
 
 import java.util.Random;
 import java.util.Scanner;
@@ -9,7 +8,7 @@ public class NamenWuerfelV3 {
         String alleKurseMitTeilnahmern [][] = {
                 // Latein (GK1)
                 {"23", "Berra", "Liv", "Deniz", "Yan Yan", "Vivian", "Johannes", "Martha", "Dominik", "Adam",
-                        "Benedikt H.", "Parnia", "Lucy", "Fatih", "Karim M.", "Katharina", "Denis", "Jakon",
+                        "Benedikt H.", "Parnia", "Lucy", "Fatih", "Karim M.", "Katharina", "Denis", "Jakob",
                         "Melina", "Shaban", "Nevia", "Tufan", "Zümra", "Tuana"},
                 // Latein (GK2)
                 {"22", "A", "B", "C"},
