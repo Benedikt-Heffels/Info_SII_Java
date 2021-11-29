@@ -4,21 +4,33 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class NamenWuerfel {
+public class NamenWuerfelV3 {
     public static void main(String[] args) {
-        String kurseBenHef [][] = {
+        String alleKurseMitTeilnahmern [][] = {
                 // Latein (GK1)
                 {"23", "Berra", "Liv", "Deniz", "Yan Yan", "Vivian", "Johannes", "Martha", "Dominik", "Adam",
                         "Benedikt H.", "Parnia", "Lucy", "Fatih", "Karim M.", "Katharina", "Denis", "Jakon",
                         "Melina", "Shaban", "Nevia", "Tufan", "Zümra", "Tuana"},
+                // Latein (GK2)
+                {"22", "A", "B", "C"},
+                // Physik (GK2) --- Liste Fehlerhaft!
+                {"20", "Johannes", "Dominik", "Eren", "Daniel"},
+                // Chemie (GK1) --- Liste Fehlerhaft!
+                {"20", "Benedikt H.", "Dominik", "Jule", "Annika", "Vivian", "Karim"},
+                // Biologie (GK1) --- Liste fehlerhaft!
+                {"20", "A", "B", "C"},
                 // Informatik (GK1)
                 {"22", "Liv", "Burcu", "Issa", "Deniz", "Emilio", "Daniel", "Eren", "Philipp G.", "Johannes", "Martha",
                         "Dominik", "Adam", "Jorit", "Benedikt H.", "Fabian", "Karim M.", "Vincent", "Denis", "Jakob",
                         "Valeria", "Nevia", "Sten"},
+
         };
-        String accounts[][] = {
-                {"BenHef", "password"},
+        String accounts[][][] = {
+                {{"BenHef", "password"}, {"0", "false", "4", "false", "6"}}, // accountline = 0
+                {{"JohGoe", "vergessen"}, {"0", "3", "false", "false", "6"}}
         };
+
+        String verwendeteListe [] = new String[25];
 
         Random wuerfelwerfen = new Random();
         Scanner scan = new Scanner(System.in);
@@ -34,7 +46,7 @@ public class NamenWuerfel {
             System.out.println("Passwort:");
             String e_pw = scan.next();
             for (int i = 0; i < 2; i++) {
-                if (accounts[i][0].equals(e_bn)) {
+                if (accounts[i][0][0].equals(e_bn)) {
                     accountline = i;
                     break;
                 }
@@ -42,21 +54,24 @@ public class NamenWuerfel {
 
 
 
-            if (accounts[accountline][1].equals(e_pw)) {
+            if (accounts[accountline][0][1].equals(e_pw)) {
                 go = true;
                 gueltigerBN = e_bn;
+                System.out.println("Login erfolgreich - Willkommen!");
             } else {
                 System.out.println("Passwort und/oder Benutzername falsch!");
             }
         }
         // gueltigeListe = "kurse" + gueltigerBN; // Update required!
-        boolean waehlen = true;
+        boolean waehlen = false;
+        boolean gueltigeWahl = false;
+        int gewuerfelt_bereinigt = 0;
 
         int fachposition = 0;
 
-        System.out.println("Willkommen!");
+
         while (go == true) {
-            System.out.println("Wählen Sie bitte das Fach aus, in dem Sie würfeln möchten: ");
+            System.out.println("\n\nWählen Sie bitte das Fach aus, in dem Sie würfeln möchten: ");
             String gewuenschtesFach = scan.next();
             if (gewuenschtesFach.equals("Deutsch")) {
                 System.out.println("Diese Kursliste existiert noch nicht!");
@@ -65,7 +80,13 @@ public class NamenWuerfel {
                 System.out.println("Diese Kursliste existiert noch nicht!");
             }
             else if (gewuenschtesFach.equals("Latein")) {
-                fachposition = 0;
+                if (!(accounts[accountline][1][0].equals("false"))) {
+                    fachposition = Integer.valueOf(accounts[accountline][1][0]);
+                    waehlen = true;
+                }
+                else {
+                    System.out.println("Du hast dieses Fach nicht belegt!");
+                }
             }
             else if (gewuenschtesFach.equals("Musik")) {
                 System.out.println("Diese Kursliste existiert noch nicht!");
@@ -82,25 +103,69 @@ public class NamenWuerfel {
             else if (gewuenschtesFach.equals("Mathe")) {
                 System.out.println("Diese Kursliste existiert noch nicht!");
             }
+            else if (gewuenschtesFach.equals("Physik")) {
+                if (!(accounts[accountline][1][1].equals("false"))) {
+                    fachposition = Integer.valueOf(accounts[accountline][1][1]);
+                    waehlen = true;
+                }
+                else {
+                    System.out.println("Du hast dieses Fach nicht belegt!");
+                }
+            }
             else if (gewuenschtesFach.equals("Chemie")) {
-                System.out.println("Diese Kursliste existiert noch nicht!");
+                if (!(accounts[accountline][1][2].equals("false"))) {
+                    fachposition = Integer.valueOf(accounts[accountline][1][2]);
+                    waehlen = true;
+                }
+                else {
+                    System.out.println("Du hast dieses Fach nicht belegt!");
+                }
             }
             else if (gewuenschtesFach.equals("Biologie")) {
-                System.out.println("Diese Kursliste existiert noch nicht!");
+                if (!(accounts[accountline][1][3].equals("false"))) {
+                    fachposition = Integer.valueOf(accounts[accountline][1][3]);
+                    waehlen = true;
+                }
+                else {
+                    System.out.println("Du hast dieses Fach nicht belegt!");
+                }
             }
             else if (gewuenschtesFach.equals("Informatik")) {
-                fachposition = 1;
+                if (!(accounts[accountline][1][3].equals("false"))) {
+                    fachposition = Integer.valueOf(accounts[accountline][1][3]);
+                    waehlen = true;
+                }
+                else {
+                    System.out.println("Du hast dieses Fach nicht belegt!");
+                }
             }
-            waehlen = true;
+            // Kopieren der Kursliste in den Array verwendete Liste
+            for (int i = 0; i <= Integer.valueOf(alleKurseMitTeilnahmern[Integer.valueOf( fachposition)] [0]); i++) {
+                verwendeteListe[i] = alleKurseMitTeilnahmern[fachposition][i];
+            }
             while (waehlen == true) {
-                int gewuerfelt = wuerfelwerfen.nextInt(Integer.valueOf(kurseBenHef[fachposition][0]));
-                System.out.println(kurseBenHef[fachposition][gewuerfelt] + " wurde gewürfelt.");
+                gueltigeWahl = false;
+                while (gueltigeWahl != true) {
+                    int gewuerfelt = wuerfelwerfen.nextInt((Integer.valueOf(alleKurseMitTeilnahmern[fachposition][0]) - 1));
+                    gewuerfelt_bereinigt = gewuerfelt + 1;
+                    if (!(verwendeteListe[gewuerfelt_bereinigt].equals("false"))) {
+                        gueltigeWahl = true;
+                    }
+                }
+
+                System.out.println("\n\n" + verwendeteListe[gewuerfelt_bereinigt] + " wurde gewürfelt.");
                 System.out.println("\nNochmal werfen? (Ja/Nein)");
                 String erneutwerfen = scan.next();
                 if (erneutwerfen.equals("Ja")) {
+                    System.out.println("Möchten Sie " + verwendeteListe[gewuerfelt_bereinigt] + " " +
+                            "aus der Übergangsliste löschen (= In diesem Durchgang nicht erneut würfelbar)? (Ja/Nein)");
+                    String loeschen = scan.next();
+                    if (loeschen.equals("Ja")) {
+                        verwendeteListe[gewuerfelt_bereinigt] = "false";
+                    }
                     waehlen = true;
                 } else {
-                    System.out.println("Stattdessen lieber das Fach wecheln? (Ja/Nein)");
+                    System.out.println("Stattdessen lieber das Fach wechseln? (Ja/Nein)");
                     String fachwechseln = scan.next();
                     if (fachwechseln.equals("Ja")) {
                         waehlen = false;
