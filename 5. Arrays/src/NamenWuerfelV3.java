@@ -25,8 +25,8 @@ public class NamenWuerfelV3 {
 
         };
         String accounts[][][] = {
-                {{"BenHef", "password"}, {"0", "false", "4", "false", "6"}}, // accountline = 0
-                {{"JohGoe", "vergessen"}, {"0", "3", "false", "false", "6"}}
+                {{"BenHef", "password"}, {"0", "false", "3", "false", "5"}}, // accountline = 0
+                {{"JohGoe", "vergessen"}, {"0", "2", "false", "false", "5"}}
         };
 
         String verwendeteListe [] = new String[25];
@@ -130,8 +130,8 @@ public class NamenWuerfelV3 {
                 }
             }
             else if (gewuenschtesFach.equals("Informatik")) {
-                if (!(accounts[accountline][1][3].equals("false"))) {
-                    fachposition = Integer.valueOf(accounts[accountline][1][3]);
+                if (!(accounts[accountline][1][4].equals("false"))) {
+                    fachposition = Integer.valueOf(accounts[accountline][1][4]);
                     waehlen = true;
                 }
                 else {
