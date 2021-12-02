@@ -10,6 +10,8 @@ public class LottoBasic {
         int[] tipps = new int[7];
         int[] ziehung = new int [7];
         boolean richtigeZahlen;
+        boolean nutzbareZahlen;
+        boolean zahlenListeHinzufuegen = true;
         int anzahlRichtige = 0;
 
         while(spielen) {
@@ -17,14 +19,47 @@ public class LottoBasic {
             // Eingabe der Tipps
             do {
                 richtigeZahlen = true;
-                for (int waehlen = 0; waehlen < 6; waehlen++) {
-                    int nrTipp = waehlen + 1;
-                    System.out.println("Bitte geben Sie Ihren Tipp Nr. " + nrTipp + " ein (1-49)!");
-                    int eingabe = scanner.nextInt();
-                    tipps[waehlen] = eingabe;
-                }
-                System.out.println("Bitte geben Sie noch Ihre Supperzahl ein (0-9)!");
-                tipps[6]= scanner.nextInt();
+                    for (int waehlen = 0; waehlen < 6; waehlen++) {
+                        nutzbareZahlen = false;
+                        do {
+                            zahlenListeHinzufuegen = true;
+                            int nrTipp = waehlen + 1;
+                            System.out.println("Bitte geben Sie Ihren Tipp Nr. " + nrTipp + " ein (1-49, noch nicht getippt)!");
+                            int eingabe = scanner.nextInt();
+                            if (eingabe <= 49 && eingabe >= 1) {
+                                for (int alteZahlenPositionen = 0; alteZahlenPositionen < waehlen; alteZahlenPositionen++) {
+                                    if (tipps[alteZahlenPositionen] == eingabe) {
+                                        zahlenListeHinzufuegen = false;
+                                        break;
+                                    }
+                                }
+                                if (zahlenListeHinzufuegen) {
+                                    tipps[waehlen] = eingabe;
+                                    nutzbareZahlen = true;
+                                }
+                                else {
+                                    System.out.println("Die Eingabe war fehlerhaft!");
+                                    nutzbareZahlen = false;
+                                }
+                            }
+                            else {
+                                System.out.println("Die Eingabe war fehlerhaft!");
+                                nutzbareZahlen = false;
+                            }
+                        } while (!nutzbareZahlen);
+                    }
+                    zahlenListeHinzufuegen = false;
+                    do {
+                        System.out.println("Bitte geben Sie noch Ihre Supperzahl ein (0-9)!");
+                        int esuperzahl = scanner.nextInt();
+                        if (esuperzahl <= 9 && esuperzahl >= 0) {
+                            tipps[6] = esuperzahl;
+                            zahlenListeHinzufuegen = true;
+                        }
+                        else {
+                            System.out.println("Ihre Superzahl war ungültig!");
+                        }
+                    }while (!zahlenListeHinzufuegen);
                 System.out.print("\nDas ist ihre Eingabe: ");
                 for (int i = 0; i < 7; i++) {
                     System.out.print(tipps[i] + " ");
@@ -55,6 +90,7 @@ public class LottoBasic {
                 superzahl = true;
             }
             // Zuordnung des Gewinnes
+            System.out.println("\n\n");
             switch (anzahlRichtige) {
                 case 0:
                     if (superzahl) {
@@ -69,7 +105,7 @@ public class LottoBasic {
                         System.out.println("Leider haben Sie nur einen richtigen Tipp, plus die Superzahl.");
                     }
                     else {
-                        System.out.println("Leider haben Sie nur einen richtigen TIpp.");
+                        System.out.println("Leider haben Sie nur einen richtigen Tipp.");
                     }
                     break;
                 case 2:
@@ -77,7 +113,7 @@ public class LottoBasic {
                         System.out.println("Glückwunsch! Sie haben zwei Richtige, plus die Superzahl!");
                     }
                     else {
-                        System.out.println("Leider haben Sie nur zwei richtige TIpps abgegeben.");
+                        System.out.println("Leider haben Sie nur zwei richtige Tipps abgegeben.");
                     }
                     break;
                 case 3:
