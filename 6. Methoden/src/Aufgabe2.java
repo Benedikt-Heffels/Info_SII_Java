@@ -50,15 +50,9 @@ public class Aufgabe2 {
         System.out.println("\t\t\t\t\t\t10.0\t20.0\t30.0\t40.0\t50.0\t60.0\t70.0\t80.0\t90.0\t100.0\tMinuten");
         for (int h = 0; h < 3; h++) {
             switch (h) {
-                case 0:
-                    System.out.print("\n" + (h + 1) + "\t\t" + coasts1 + "\t\t\t");
-                    break;
-                case 1:
-                    System.out.print("\n" + (h + 1) + "\t\t" + coasts2 + "\t\t\t");
-                    break;
-                case 2:
-                    System.out.print("\n" + (h + 1) + "\t\t" + coasts3 + "\t\t\t");
-                    break;
+                case 0 -> System.out.print("\n" + (h + 1) + "\t\t" + coasts1 + "\t\t\t");
+                case 1 -> System.out.print("\n" + (h + 1) + "\t\t" + coasts2 + "\t\t\t");
+                case 2 -> System.out.print("\n" + (h + 1) + "\t\t" + coasts3 + "\t\t\t");
             }
             for (int i = 0; i < 10; i++) {
                 String string = String.valueOf(array[h][i]);
