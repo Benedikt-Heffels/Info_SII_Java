@@ -1,12 +1,12 @@
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.io.*;
 
 public class allg_funktionen {
     public static Scanner scanner = new Scanner(System.in);
     public static File folderusers = new File ("Z. HueckTech/users");
-    public static String strkontopath = "Nicht angemeldet!";
-
     public static Object LogIn() {
+        String strkontopath = "Nicht angemeldet!";
         System.out.println("Bitte loggen Sie sich ein:");
         boolean go = true;
         do {
@@ -26,7 +26,7 @@ public class allg_funktionen {
                     }
                     if (e_pw.equals(true_pw)) {
                         System.out.println("LogIn succesfully!");
-                        strkontopath = "Z. HueckTech/kstd" + e_bn + "-kstd.txt";
+                        strkontopath = "Z. HueckTech/kstd/" + e_bn + "-kstd.txt";
                         go = true;
                     }
                     else {
@@ -59,12 +59,57 @@ public class allg_funktionen {
                 kontostand = Integer.valueOf(strkontostand);
                 break;
             }
+            filescanner.close();
+
+        }
+        catch (IOException e) {
+            System.out.println("Scan-Fehler!");
+            System.out.println("Fehlercode: S-aF-SC-0002");
+            System.exit(1);
+
+        }
+        return kontostand;
+    }
+
+    public static Object kstd_veraendern (String varstrkontopath, int kontostandaenderung, int funktion) {
+        // funktion = 1 => addieren; funktion = 2 => subtrahieren
+        String strkontostand;
+        int kontostand = 0;
+        File kontopath = new File(varstrkontopath);
+        try {
+            Scanner filescanner = new Scanner(kontopath);
+            while (filescanner.hasNext()) {
+                strkontostand = filescanner.next();
+                kontostand = Integer.valueOf(strkontostand);
+                break;
+            }
+            filescanner.close();
+
         }
         catch (IOException e) {
             System.out.println("Scan-Fehler!");
             System.out.println("Fehlercode: S-aF-SC-0002");
             System.exit(1);
         }
-        return kontostand;
+        switch (funktion) {
+            case 1:
+                kontostand += kontostandaenderung;
+                break;
+            case 2:
+                kontostand -= kontostandaenderung;
+                break;
+            default:
+                System.out.println("Error!");
+        }
+        try {
+            OutputStream stream = new FileOutputStream(kontopath);
+            String ausgabe = String.valueOf(kontostand);
+            stream.write(ausgabe.getBytes(StandardCharsets.UTF_8));
+            stream.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

@@ -1,12 +1,21 @@
 
+import java.io.File;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Lotto {
+    public static File kontopath = new File("Z. HueckTech/users/NE-NichtEingeloggt.txt");
     public static void main(String[] args) {
+        String strkontopath = "Nicht Eingeloogt";
         System.out.println("Herzlich Willkommen bei Lotto HueckTech - 6 aus 49");
+        System.out.println("Bitte melden Sie sich zunächst mit Ihrem Konto bei der HueckTech Bank an!");
+        String strkontopathungueltig = (String) allg_funktionen.LogIn();
+        if (!(strkontopathungueltig.equals("Nicht angemeldet!"))) {
+            strkontopath = strkontopathungueltig;
+            kontopath = new File(strkontopath);
+        }
         boolean spielen = true;
-        long kontostand = 100;
+        int kontostand = 0;
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         int[] tipps = new int[7];
@@ -15,23 +24,21 @@ public class Lotto {
         boolean nutzbareZahlen;
         boolean zahlenListeHinzufuegen = true;
         int anzahlRichtige = 0;
+        int rundekosten = 1;
+        int kontoaenderung = 0;
 
         while(spielen) {
-            System.out.println("Die Runde kostet 1 Euro!");
+            System.out.println("Die Runde kostet " + rundekosten + " Euro!");
             System.out.println("Wollen Sie spielen? (Ja/Nein)");
             String spielstart = scanner.next();
             if (spielstart.equals("Ja")) {
-                if (kontostand >= 1) {
-                    kontostand -= 1;
-                    System.out.println("Kontostand: " + kontostand + "€");
+                kontostand = (int) allg_funktionen.kstd_lesen(strkontopath);
+                if (kontostand < rundekosten) {
+                    System.out.println("Auf ihrem Konto ist leider nicht genug Geld! Bitte zahlen Sie zunächst in der Bank Geld ein!");
                 }
                 else {
-                    System.out.println("Auf Ihrem Konto ist leider nicht genug Geld für die Runde.");
-                    System.exit(2);
+                    kontoaenderung += 1;
                 }
-            }
-            else {
-                break;
             }
             boolean superzahl = false;
             // Eingabe der Tipps
@@ -143,7 +150,7 @@ public class Lotto {
                     if (superzahl) {
                         System.out.println("Glückwunsch! Sie haben zwei Richtige, plus die Superzahl!");
                         System.out.println("Sie haben 6 Euro gewonnen!");
-                        kontostand += 6;
+                        allg_funktionen.kstd_veraendern(strkontopath, 6, 1);
                     }
                     else {
                         System.out.println("Leider haben Sie nur zwei richtige Tipps abgegeben.");
@@ -153,48 +160,48 @@ public class Lotto {
                     if (superzahl) {
                         System.out.println("Glückwunsch! Sie haben 3 Richtige und die Superzahl!");
                         System.out.println("Sie haben 26 Euro gewonnen!");
-                        kontostand += 26;
+                        allg_funktionen.kstd_veraendern(strkontopath, 26, 1);
                     }
                     else {
                         System.out.println("Glückwunsch! Sie haben 3 Richtige!");
                         System.out.println("Sie haben 14 Euro gewonnen!");
-                        kontostand += 14;
+                        allg_funktionen.kstd_veraendern(strkontopath, 14, 1);
                     }
                     break;
                 case 4:
                     if (superzahl) {
                         System.out.println("Glückwunsch! Sie haben 4 Richtige und die Superzahl richtig.");
                         System.out.println("Sie haben 243 Euro gewonnen!");
-                        kontostand += 243;
+                        allg_funktionen.kstd_veraendern(strkontopath, 243, 1);
                     }
                     else{
                         System.out.println("Glückwunsch! Sie haben 4 Richtige!");
                         System.out.println("Sie haben 68 Euro gewonnen!");
-                        kontostand += 68;
+                        allg_funktionen.kstd_veraendern(strkontopath, 68, 1);
                     }
                     break;
                 case 5:
                     if (superzahl) {
                         System.out.println("Glückwunsch! 5 von Ihren Tipps und die Superzahl sind Richtig!");
                         System.out.println("Sie haben 17000 Euro gewonnen!");
-                        kontostand += 17000;
+                        allg_funktionen.kstd_veraendern(strkontopath, 17000, 1);
                     }
                     else {
                         System.out.println("Glückwunsch! Sie haben 5 Richtige!");
                         System.out.println("Sie haben 5500 Euro gewonnen!");
-                        kontostand += 5500;
+                        allg_funktionen.kstd_veraendern(strkontopath, 5500, 1);
                     }
                     break;
                 case 6:
                     if (superzahl) {
                         System.out.println("Glückwunsch! All Ihre Tipps sind richtig!");
                         System.out.println("Hauptgewinn! Sie haben 3,5 Millionen Euro gewonnen!!");
-                        kontostand += 3500000;
+                        allg_funktionen.kstd_veraendern(strkontopath, 3500000, 1);
                     }
                     else {
                         System.out.println("Glückwunsch! Sie haben 6 Richtige!");
                         System.out.println("Sie haben 2,5 Millionen Euro gewonnen!");
-                        kontostand += 2500000;
+                        allg_funktionen.kstd_veraendern(strkontopath, 2500000, 1);
                     }
                     break;
             }
@@ -212,6 +219,9 @@ public class Lotto {
                 spielen = false;
             }
         }
+        allg_funktionen.kstd_veraendern(strkontopath, kontoaenderung, 2);
+        kontostand = (int) allg_funktionen.kstd_lesen(strkontopath);
+
         System.out.println("\n\n\nIhr Kontostand bei der HueckTechBank: " + kontostand + "€");
         System.out.println("\nVielen Dank, dass Sie Lotto HueckTech verwendet haben!\n" +
                 "Wir hoffen Sie bald wiederzubeehren!");
