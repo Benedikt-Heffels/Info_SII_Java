@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Lotto {
     public static File kontopath = new File("Z. HueckTech/users/NE-NichtEingeloggt.txt");
-
     public static void main(String[] args) {
         String strkontopath = "Nicht Eingeloogt";
         System.out.println("Herzlich Willkommen bei Lotto HueckTech - 6 aus 49");
@@ -15,13 +14,6 @@ public class Lotto {
             strkontopath = strkontopathungueltig;
             kontopath = new File(strkontopath);
         }
-        lottoMain(null, strkontopath, false, false);
-        System.out.println("\nVielen Dank, dass Sie Lotto HueckTech verwendet haben!\n" +
-                "Wir hoffen Sie bald wiederzubeehren!");
-    }
-
-
-    public static void lottoMain(String[] args, String strkontopath, boolean needLogIN, boolean viaHaupt) {
         boolean spielen = true;
         int kontostand = 0;
         Random random = new Random();
@@ -231,12 +223,7 @@ public class Lotto {
         kontostand = (int) allg_funktionen.kstd_lesen(strkontopath);
 
         System.out.println("\n\n\nIhr Kontostand bei der HueckTechBank: " + kontostand + "€");
-        if (viaHaupt) {
-            System.out.println("Wollen Sie zurück ins Hauptmenue? (Ja/Nein)");
-            String backHM = scanner.next();
-            if (backHM.equals("Ja")) {
-                return;
-            }
-        }
+        System.out.println("\nVielen Dank, dass Sie Lotto HueckTech verwendet haben!\n" +
+                "Wir hoffen Sie bald wiederzubeehren!");
     }
 }

@@ -3,43 +3,30 @@ import java.util.*;
 
 public class Bank {
     public static File kontopath = new File("Z. HueckTech/users/NE-NichtEingeloggt.txt");
-
-
     public static void main(String[] args) {
-        String strkontopath = "Nicht Eingeloogt!";
-        //Wenn nur das Bankprogramm laufen gelassen werden soll, muss diese Methode gestartet werden!
+        Scanner scanner = new Scanner(System.in);
+        String strkontopath = "Nicht eingeloogt!";
+        boolean go = false; // Startet Hauptprogramm!
         System.out.println("Herzlich Willkommen in der HueckTechBank!");
         System.out.println("Bitte anmelden!");
         String strkontopathungueltig = (String) allg_funktionen.LogIn();
         if (!(strkontopathungueltig.equals("Nicht angemeldet!"))) {
             strkontopath = strkontopathungueltig;
             kontopath = new File(strkontopath);
+            go = true;
         }
         else {
             System.out.println("Systemfehler");
             System.out.println("Fehlercode: S-B-LI-0001");
             System.exit(1);
         }
-        bankMain(null, strkontopath, false, false);
-    }
-
-
-    public static void bankMain (String[] args, String strkontopath, boolean needLogIN, boolean viaHaupt) {
-        Scanner scanner = new Scanner(System.in);
-        boolean go = true; // Startet Hauptprogramm!
         int kontostand = 0;
         while (go) {
             System.out.println("\n\nWas wollen Sie tun?\n" +
                     "\t(1) Kontostand anzeigen\n" +
                     "\t(2) Geld auszahlen\n" +
                     "\t(3) Geld einzahlen\n" +
-                    "\t(4) Programm verlassen"
-            );
-            if (viaHaupt) {
-                System.out.println("\t(5) Zurück ins Hauptmenue");
-            }
-            System.out.println("Nummer eingeben:");
-
+                    "Nummer eingeben:");
             int wahl = scanner.nextInt();
             int funktion = 0;
             kontostand = (int) allg_funktionen.kstd_lesen(strkontopath);
@@ -78,11 +65,6 @@ public class Bank {
                     kontostand = (int) allg_funktionen.kstd_lesen(strkontopath);
                     System.out.println("Ihr Kontostand beträgt nun " + kontostand + "€.");
                     break;
-                case 4:
-                    System.exit(0);
-                    break;
-                case 5:
-                    return;
                 default:
                     System.out.println("Error");
             }
