@@ -2,6 +2,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.io.*;
 
+
 public class allg_funktionen {
     public static Scanner scanner = new Scanner(System.in);
     public static File folderusers = new File ("Z. HueckTech/users");
