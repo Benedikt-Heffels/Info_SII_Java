@@ -1,0 +1,3 @@
+tab: Ergänzung
+Pfeiltasten: Eingeb von vorher
+Strg+C: Unterbricht aktiven Prozess (im Terminal)

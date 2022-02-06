@@ -1,0 +1,15 @@
+Console
+System.console().readPassword -> Eingabe unsichtbar
+
+Nicht startbar über das normale Run-Menü!
+
+Stattdessen: Terminal
+Über cd in den Ordner des Projektes (unter out\production) navigieren
+Pfad der java.exe - Datei angeben, dahinter Dateiname der auszuführenden Datei (.class-Datei, jedoch ohne das .class)
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+Idee: javaw.exe durch java.exe ersetzen?

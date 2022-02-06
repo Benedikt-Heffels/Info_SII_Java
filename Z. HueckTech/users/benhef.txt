@@ -1,1 +1,1 @@
-password //Dies ist Ihr Passwort
+Passwort //Dies ist Ihr Passwort
