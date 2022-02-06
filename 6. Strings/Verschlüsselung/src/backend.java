@@ -20,6 +20,7 @@ public class backend {
 
     public static void main(String[] args) {
         verschlüsseln();
+        entschlüsseln();
     }
     public static String verschlüsseln() {
         Scanner scanner = new Scanner(System.in);
@@ -149,7 +150,50 @@ public class backend {
 
         return null;
     }
-    public static String entschlüsseln(String verschlüsselteNachricht) {
+    public static String entschlüsseln() {
+        System.out.println("Bitte zu entschlüsselnde Nachricht eingeben:");
+        Scanner scanner = new Scanner(System.in);
+        String entschlüsselteNachricht = scanner.next();
+        String kompletteEntschlüsselteNachricht = "";
+        int posStrich1 = 0;
+        int posStrich2 = 0;
+        //Bestimmen der späteren Substring-Positions
+        for (int element1 = 0; element1 < entschlüsselteNachricht.length(); element1++) {
+            String element1STR = String.valueOf(entschlüsselteNachricht.charAt(element1));
+            if (element1STR.equals("-")) {
+                posStrich1 = element1;
+            }
+        }
+        for (int element2 = (posStrich1 + 1); element2 < entschlüsselteNachricht.length(); element2++) {
+            String element2STR = String.valueOf(entschlüsselteNachricht.charAt(element2));
+            if (element2STR.equals("-")) {
+                posStrich2 = element2;
+            }
+        }
+        long entschlüsseltesDate = Long.valueOf(entschlüsselteNachricht.substring(0, (posStrich1 - 1)));
+        long entschlüsseltePosition = Long.valueOf(entschlüsselteNachricht.substring((posStrich1 + 1), (posStrich2 - 1)));
+        entschlüsseltePosition = entschlüsseltePosition / entschlüsseltesDate; //An dieser Position ist der Summand versteckt!
+        String posNULL1 = String.valueOf(entschlüsselteNachricht.charAt((posStrich2 + 1)));
+        String posNULL2 = String.valueOf(entschlüsselteNachricht.charAt(posStrich2 + 2));
+        int anzahlNULLanfang = 0;
+        String nachrichtenTextInZahl1STR = "";
+        if (posNULL1.equals("0") && !posNULL2.equals("0")) {
+            anzahlNULLanfang = 1;
+            nachrichtenTextInZahl1STR = "0";
+        }
+        else if (posNULL1.equals("0") && posNULL2.equals("0")) {
+            anzahlNULLanfang = 2;
+            nachrichtenTextInZahl1STR = "00";
+        }
+        else {
+            anzahlNULLanfang = 0;
+        }
+        long nachrtichtenTextInZahl1 = Long.valueOf(entschlüsselteNachricht.substring((posStrich2 + 1), entschlüsselteNachricht.length()));
+        nachrtichtenTextInZahl1 = nachrtichtenTextInZahl1 / entschlüsseltesDate;
+        nachrichtenTextInZahl1STR = nachrichtenTextInZahl1STR + String.valueOf(nachrtichtenTextInZahl1);
+        long additionsfaktor = Long.valueOf(nachrichtenTextInZahl1STR.substring((int) entschlüsseltePosition, ((int) entschlüsseltePosition + 3)));
+        System.out.println(additionsfaktor);
+
 
 
 
