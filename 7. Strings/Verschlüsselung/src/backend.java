@@ -44,6 +44,7 @@ public class backend {
             int extrahierteKetteTest = Integer.valueOf(verschlüsselteNachricht.substring(0, 3)); //Important: IM 'int' wird die Null weggelassen!
             extrahierteKetteTest += randomaddition;
             if (extrahierteKetteTest < 1000) {
+                System.out.println("RandomAdiFaktor: " + randomaddition);
                 randomTest = false;
                 System.out.println(randomaddition);
             }
@@ -177,7 +178,13 @@ public class backend {
         System.out.println("PS1 " + posStrich1);
         System.out.println("PS2 " + posStrich2);
         long entschlüsseltesDate = Long.valueOf(entschlüsselteNachricht.substring(0, (posStrich1 - 1)));
-        long entschlüsseltePosition = Long.valueOf(entschlüsselteNachricht.substring((posStrich1 + 1), (posStrich2 - 1)));
+        long entschlüsseltePosition;
+        if ((posStrich1 + 1) == (posStrich2 - 1)) {
+            entschlüsseltePosition = Long.valueOf(entschlüsselteNachricht.charAt((posStrich1 + 1)));
+        }
+        else {
+            entschlüsseltePosition = Long.valueOf(entschlüsselteNachricht.substring((posStrich1 + 1), (posStrich2 - 1)));
+        }
         entschlüsseltePosition = entschlüsseltePosition / entschlüsseltesDate; //An dieser Position ist der Summand versteckt!
         String posNULL1 = String.valueOf(entschlüsselteNachricht.charAt((posStrich2 + 1)));
         String posNULL2 = String.valueOf(entschlüsselteNachricht.charAt(posStrich2 + 2));
