@@ -118,29 +118,29 @@ public class backend {
         String verschlüsselteNachrichtStufe4 = localDateSTR + "-";
         System.out.println(5);
         if (pos0.equals("0") && !pos1.equals("0")) {
-            int mult1 = Integer.valueOf(verschlüsselteNachrichtStufe3.substring(0,2));
+            int mult1 = Integer.valueOf(verschlüsselteNachrichtStufe3.substring(0,3));
             mult1 = mult1 * localDateINT;
             verschlüsselteNachrichtStufe4 = verschlüsselteNachrichtStufe4 + String.valueOf(mult1) + "-";
-            long mult2 = Long.valueOf(verschlüsselteNachrichtStufe3.substring(4,((verschlüsselteNachrichtStufe3.length())-1)));
+            long mult2 = Long.valueOf(verschlüsselteNachrichtStufe3.substring(5,((verschlüsselteNachrichtStufe3.length())-1)));
             mult2 = mult2 * localDateINT;
             String mult2STR = "0" + String.valueOf(mult2);
             verschlüsselteNachrichtStufe4 = verschlüsselteNachrichtStufe4 + mult2STR;
 
         }
         else if (pos0.equals("0") && pos1.equals("0")) {
-            int mult1 = Integer.valueOf(verschlüsselteNachrichtStufe3.substring(0,2));
+            int mult1 = Integer.valueOf(verschlüsselteNachrichtStufe3.substring(0,3));
             mult1 = mult1 * localDateINT;
             verschlüsselteNachrichtStufe4 = verschlüsselteNachrichtStufe4 + String.valueOf(mult1) + "-";
-            long mult2 = Long.valueOf(verschlüsselteNachrichtStufe3.substring(4,((verschlüsselteNachrichtStufe3.length())-1)));
+            long mult2 = Long.valueOf(verschlüsselteNachrichtStufe3.substring(5,((verschlüsselteNachrichtStufe3.length())-1)));
             mult2 = mult2 * localDateINT;
             String mult2STR = "00" + String.valueOf(mult2);
             verschlüsselteNachrichtStufe4 = verschlüsselteNachrichtStufe4 + mult2STR;
         }
         else {
-            int mult1 = Integer.valueOf(verschlüsselteNachrichtStufe3.substring(0,2));
+            int mult1 = Integer.valueOf(verschlüsselteNachrichtStufe3.substring(0,3));
             mult1 = mult1 * localDateINT;
             verschlüsselteNachrichtStufe4 = verschlüsselteNachrichtStufe4 + String.valueOf(mult1) + "-";
-            long mult2 = Long.valueOf((verschlüsselteNachrichtStufe3.substring(4,((verschlüsselteNachrichtStufe3.length())-1))));
+            long mult2 = Long.valueOf((verschlüsselteNachrichtStufe3.substring(5,((verschlüsselteNachrichtStufe3.length())-1))));
             mult2 = mult2 * localDateINT;
             String mult2STR = String.valueOf(mult2);
             verschlüsselteNachrichtStufe4 = verschlüsselteNachrichtStufe4 + mult2STR;
@@ -161,15 +161,21 @@ public class backend {
         for (int element1 = 0; element1 < entschlüsselteNachricht.length(); element1++) {
             String element1STR = String.valueOf(entschlüsselteNachricht.charAt(element1));
             if (element1STR.equals("-")) {
+                System.out.println("YES");
                 posStrich1 = element1;
+                System.out.println("PS1.1 " + posStrich1);
+                break;
             }
         }
         for (int element2 = (posStrich1 + 1); element2 < entschlüsselteNachricht.length(); element2++) {
             String element2STR = String.valueOf(entschlüsselteNachricht.charAt(element2));
             if (element2STR.equals("-")) {
                 posStrich2 = element2;
+                break;
             }
         }
+        System.out.println("PS1 " + posStrich1);
+        System.out.println("PS2 " + posStrich2);
         long entschlüsseltesDate = Long.valueOf(entschlüsselteNachricht.substring(0, (posStrich1 - 1)));
         long entschlüsseltePosition = Long.valueOf(entschlüsselteNachricht.substring((posStrich1 + 1), (posStrich2 - 1)));
         entschlüsseltePosition = entschlüsseltePosition / entschlüsseltesDate; //An dieser Position ist der Summand versteckt!
