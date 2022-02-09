@@ -1,3 +1,5 @@
+package JavaForumAlgorithmus;
+
 public class JavaForumQuizForSchleife {
     public static void main(String[] args) {
         System.out.println("Aus dem Java-Forum!");

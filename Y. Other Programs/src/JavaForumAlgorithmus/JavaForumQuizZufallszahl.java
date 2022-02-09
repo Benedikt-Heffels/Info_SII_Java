@@ -1,3 +1,5 @@
+package JavaForumAlgorithmus;
+
 import java.util.Random;
 
 public class JavaForumQuizZufallszahl {

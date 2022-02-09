@@ -20,7 +20,7 @@ public class backend {
 
     public static void main(String[] args) {
         verschlüsseln();
-        entschlüsseln();
+        //entschlüsseln();
     }
     public static String verschlüsseln() {
         Scanner scanner = new Scanner(System.in);
