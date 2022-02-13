@@ -1,5 +1,6 @@
+package Schule;
 public class Schule {
-    private String Fach, Lehrer, Raum, Hausaufgaben, Aufgaben, Inhalte_gelerntes, Materialien, Termine, Sprache, Mitschüler;
+    private String Fach, Lehrer, Raum, Hausaufgaben, Aufgaben, Inhalte_gelerntes, Materialien, Termine, Sprache, Mitschueler;
     private String [][][] ArraySTR = {
             //Montag
             {{"1", "Biologie", "Herr Latour", "NW2"}, {"2", "Mathe", "Frau Wegner", "C0.47"},

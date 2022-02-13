@@ -2,10 +2,10 @@
 
 
 package Auto;
-import java.util.Scanner;
+
 import java.awt.*;
 import java.net.URI;
-
+import java.util.Scanner;
 
 
 public class Main {

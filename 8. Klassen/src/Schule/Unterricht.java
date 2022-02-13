@@ -1,5 +1,5 @@
 public class Unterricht {
-    private String Fach, Lehrer, Raum, Hausaufgaben, Aufgaben, Inhalte_gelerntes, Materialien, Termine, Sprache, Mitschüler;
+    private String Fach, Lehrer, Raum;
 
     public Unterricht () {
         Fach = "";

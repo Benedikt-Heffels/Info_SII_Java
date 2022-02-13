@@ -1,3 +1,4 @@
+package Schule;
 import java.util.Scanner;
 
 public class ZugriffSchule {
