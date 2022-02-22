@@ -1,0 +1,6 @@
+Fehlercodes im Programm:
+Liegt ein Fehler vor, idt der exit-code 1!
+
+S-aF-SC-0001: Scanfehler bei Anmeldung/Kontorlle des Passwortes
+S-aF-SC-0002: Scanfehler in try/catch Kontostand ausgeben
+S-B-LI-0001: Loginfehler/Konto konnte nicht aus Modul allg_funktionen übernommen werden
