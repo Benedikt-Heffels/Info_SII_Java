@@ -1,4 +1,4 @@
-package BeispielPedMat;
+package Beispiel;
 
 public class MeinBild {
     private Kreis kreis1;
