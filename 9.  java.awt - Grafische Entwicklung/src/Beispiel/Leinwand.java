@@ -1,4 +1,4 @@
-package BeisielPedMat;
+package Beispiel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,6 +34,7 @@ public class Leinwand {
      * Fabrikmethode, die eine Referenz auf das einzige Exemplar dieser Klasse
      * zurückliefert. Wenn es von einer Klasse nur genau ein Exemplar gibt, wird
      * dieses als 'Singleton' bezeichnet.
+     * @return
      */
     public static Leinwand gibLeinwand() {
         if (leinwandSingleton == null) {

@@ -1,4 +1,4 @@
-package Beispiel;
+package EigenesAWT;
 
 import java.awt.*;
 
@@ -31,6 +31,14 @@ public class Quadrat {
         yPosition = 120;
         farbe = "rot";
         istSichtbar = false;
+    }
+
+    public void setxPosition(int xPosition) {
+        this.xPosition = xPosition;
+    }
+
+    public void setyPosition(int yPosition) {
+        this.yPosition = yPosition;
     }
 
     /**
@@ -159,7 +167,7 @@ public class Quadrat {
      */
     private void zeichnen() {
         if (istSichtbar) {
-            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
+            EigenesAWT.Leinwand leinwand = EigenesAWT.Leinwand.gibLeinwand();
             leinwand.zeichne(this, farbe, new Rectangle(xPosition, yPosition,
                     groesse, groesse));
             leinwand.warte(10);
@@ -171,7 +179,7 @@ public class Quadrat {
      */
     private void loeschen() {
         if (istSichtbar) {
-            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
+            EigenesAWT.Leinwand leinwand = EigenesAWT.Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
     }

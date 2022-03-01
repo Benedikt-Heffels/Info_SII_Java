@@ -17,11 +17,10 @@ import java.util.Map;
  * @author: Bruce Quig
  * @author: Michael Kölling (mik)
  * @author: Axel Schmolitzky
- * @author Benedikt Heffels (Luwipal)
  *
  * @version: 31.07.2011
  */
-public class LeinwandEIgenesAWT {
+public class Leinwand {
     // Hinweis: Die Implementierung dieser Klasse (insbesondere die
     // Verwaltung der Farben und Identitäten der Figuren) ist etwas
     // komplizierter als notwendig. Dies ist absichtlich so, weil damit
@@ -29,16 +28,16 @@ public class LeinwandEIgenesAWT {
     // für den Lernanspruch dieses Projekts einfacher und klarer
     // sein können.
 
-    private static LeinwandEIgenesAWT leinwandSingleton;
+    private static Leinwand leinwandSingleton;
 
     /**
      * Fabrikmethode, die eine Referenz auf das einzige Exemplar dieser Klasse
      * zurückliefert. Wenn es von einer Klasse nur genau ein Exemplar gibt, wird
      * dieses als 'Singleton' bezeichnet.
      */
-    public static LeinwandEIgenesAWT gibLeinwand() {
+    public static Leinwand gibLeinwand() {
         if (leinwandSingleton == null) {
-            leinwandSingleton = new LeinwandEIgenesAWT("BlueJ Figuren Demo", 1000, 1000, //!ANPASSUNG
+            leinwandSingleton = new Leinwand("BlueJ Figuren Demo", 500, 300,
                     Color.white);
         }
         leinwandSingleton.setzeSichtbarkeit(true);
@@ -63,20 +62,21 @@ public class LeinwandEIgenesAWT {
 
     /**
      * Erzeuge eine Original.Leinwand.
-     *  @param "Programm von Benedikt Heffels"
+     *
+     * @param titel
      *            Titel, der im Rahmen der Original.Leinwand angezeigt wird
-     * @param blueJ_figuren_demo
      * @param breite
      *            die gewünschte Breite der Original.Leinwand
      * @param hoehe
- *            die gewünschte Höhe der Original.Leinwand
+     *            die gewünschte Höhe der Original.Leinwand
      * @param grundfarbe
+     *            die Hintergrundfarbe der Original.Leinwand
      */
-    private LeinwandEIgenesAWT(String blueJ_figuren_demo, int breite, int hoehe, Color grundfarbe) {
+    private Leinwand(String titel, int breite, int hoehe, Color grundfarbe) {
         fenster = new JFrame();
         zeichenflaeche = new Zeichenflaeche();
         fenster.setContentPane(zeichenflaeche);
-        fenster.setTitle("Programm von Benedikt Heffels");
+        fenster.setTitle(titel);
         fenster.setLocation(30, 30);
         zeichenflaeche.setPreferredSize(new Dimension(breite, hoehe));
         hintergrundfarbe = grundfarbe;
@@ -160,6 +160,9 @@ public class LeinwandEIgenesAWT {
         }
         else if(farbname.equals("gruen")) {
             graphic.setColor(new Color(80, 160, 60));
+        }
+        else if(farbname.equals("glas")) {
+            graphic.setColor(new Color(121, 174, 191));
         }
         else if(farbname.equals("lila")) {
             graphic.setColor(Color.magenta);

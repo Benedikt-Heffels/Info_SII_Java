@@ -157,7 +157,7 @@ public class Kreis {
      */
     private void zeichnen() {
         if (istSichtbar) {
-            BeisielPedMat.Leinwand leinwand = BeisielPedMat.Leinwand.gibLeinwand();
+            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
             leinwand.zeichne(this, farbe, new Ellipse2D.Double(xPosition,
                     yPosition, durchmesser, durchmesser));
             leinwand.warte(10);
@@ -169,7 +169,7 @@ public class Kreis {
      */
     private void loeschen() {
         if (istSichtbar) {
-            BeisielPedMat.Leinwand leinwand = BeisielPedMat.Leinwand.gibLeinwand();
+            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
     }

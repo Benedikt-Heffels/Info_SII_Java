@@ -163,7 +163,7 @@ public class Person {
         int y = yPosition;
 
         if(istSichtbar) {
-            BeisielPedMat.Leinwand leinwand = BeisielPedMat.Leinwand.gibLeinwand();
+            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
             int[] xpunkte = { x-3, x-hw, x-hw, x-(int)(hw*0.2)-1, x-(int)(hw*0.2)-1, x-hw,
                     x-hw+(int)(hw*0.4)+1, x, x+hw-(int)(hw*0.4)-1, x+hw, x+(int)(hw*0.2)+1,
                     x+(int)(hw*0.2)+1, x+hw, x+hw, x+3, x+(int)(hw*0.6),
@@ -182,7 +182,7 @@ public class Person {
      */
     private void loeschen() {
         if (istSichtbar) {
-            BeisielPedMat.Leinwand leinwand = BeisielPedMat.Leinwand.gibLeinwand();
+            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
     }

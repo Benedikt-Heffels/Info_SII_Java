@@ -1,17 +1,17 @@
-package Beispiel;
+package EigenesAWT;
 
-import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
 /**
- * Ein Original.Quadrat, das manipuliert werden kann und sich selbst auf einer Original.Leinwand
+ * Ein Original.Kreis, der manipuliert werden kann und sich selbst auf einer Original.Leinwand
  * zeichnet.
  *
  * @author Michael Kölling und David J. Barnes
  * @version 31.07.2011
  */
 
-public class Quadrat {
-    private int groesse;
+public class Kreis {
+    private int durchmesser;
 
     private int xPosition;
 
@@ -22,19 +22,22 @@ public class Quadrat {
     private boolean istSichtbar;
 
     /**
-     * Erzeuge ein neues Original.Quadrat mit einer Standardfarbe an einer
-     * Standardposition.
+     * Erzeuge einen neuen Original.Kreis an einer Standardposition mit einer
+     * Standardfarbe.
      */
-    public Quadrat() {
-        groesse = 60;
-        xPosition = 310;
-        yPosition = 120;
-        farbe = "rot";
-        istSichtbar = false;
+    public Kreis() {
+        durchmesser = 68;
+        //xPosition = 230;
+        //yPosition = 90;
+        farbe = "blau";
     }
 
+    public void setxPosition(int xPosition) {this.xPosition = xPosition;}
+
+    public void setyPosition(int yPosition) {this.yPosition = yPosition;}
+
     /**
-     * Mache dieses Original.Quadrat sichtbar. Wenn es bereits sichtbar ist, tue nichts.
+     * Mache diesen Original.Kreis sichtbar. Wenn es bereits sichtbar ist, tue nichts.
      */
     public void sichtbarMachen() {
         istSichtbar = true;
@@ -42,7 +45,7 @@ public class Quadrat {
     }
 
     /**
-     * Mache dieses Original.Quadrat unsichtbar. Wenn es bereits unsichtbar ist, tue
+     * Mache diesen Original.Kreis unsichtbar. Wenn es bereits unsichtbar ist, tue
      * nichts.
      */
     public void unsichtbarMachen() {
@@ -51,44 +54,44 @@ public class Quadrat {
     }
 
     /**
-     * Bewege dieses Original.Quadrat einige Bildschirmpunkte nach rechts.
+     * Bewege diesen Original.Kreis einige Bildschirmpunkte nach rechts.
      */
     public void nachRechtsBewegen() {
         horizontalBewegen(20);
     }
 
     /**
-     * Bewege dieses Original.Quadrat einige Bildschirmpunkte nach links.
+     * Bewege diesen Original.Kreis einige Bildschirmpunkte nach links.
      */
     public void nachLinksBewegen() {
         horizontalBewegen(-20);
     }
 
     /**
-     * Bewege dieses Original.Quadrat einige Bildschirmpunkte nach oben.
+     * Bewege diesen Original.Kreis einige Bildschirmpunkte nach oben.
      */
     public void nachObenBewegen() {
         vertikalBewegen(-20);
     }
 
     /**
-     * Bewege dieses Original.Quadrat einige Bildschirmpunkte nach unten.
+     * Bewege diesen Original.Kreis einige Bildschirmpunkte nach unten.
      */
     public void nachUntenBewegen() {
         vertikalBewegen(20);
     }
 
     /**
-     * Bewege dieses Original.Quadrat horizontal um 'entfernung' Bildschirmpunkte.
+     * Bewege diesen Original.Kreis horizontal um 'entfernung' Bildschirmpunkte.
      */
-    public void horizontalBewegen(int distance) {
+    public void horizontalBewegen(int entfernung) {
         loeschen();
-        xPosition += distance;
+        xPosition += entfernung;
         zeichnen();
     }
 
     /**
-     * Bewege dieses Original.Quadrat vertikal um 'entfernung' Bildschirmpunkte.
+     * Bewege diesen Original.Kreis vertikal um 'entfernung' Bildschirmpunkte.
      */
     public void vertikalBewegen(int entfernung) {
         loeschen();
@@ -97,8 +100,7 @@ public class Quadrat {
     }
 
     /**
-     * Bewege dieses Original.Quadrat langsam horizontal um 'entfernung'
-     * Bildschirmpunkte.
+     * Bewege diesen Original.Kreis langsam horizontal um 'entfernung' Bildschirmpunkte.
      */
     public void langsamHorizontalBewegen(int entfernung) {
         int delta;
@@ -117,7 +119,7 @@ public class Quadrat {
     }
 
     /**
-     * Bewege dieses Original.Quadrat langsam vertikal um 'entfernung' Bildschirmpunkte.
+     * Bewege diesen Original.Kreis langsam vertikal um 'entfernung' Bildschirmpunkte.
      */
     public void langsamVertikalBewegen(int entfernung) {
         int delta;
@@ -136,17 +138,17 @@ public class Quadrat {
     }
 
     /**
-     * Ändere die Größe dieses Quadrates in 'neueGroesse'. 'neueGroesse' muss
-     * groesser gleich Null sein.
+     * Ändere den Durchmesser dieses Kreises in 'neuerDurchmesser' (Angabe in
+     * Bildschirmpunkten). 'neuerDurchmesser' muss größer gleich Null sein.
      */
-    public void groesseAendern(int neueGroesse) {
+    public void groesseAendern(int neuerDurchmesser) {
         loeschen();
-        groesse = neueGroesse;
+        durchmesser = neuerDurchmesser;
         zeichnen();
     }
 
     /**
-     * Ändere die Farbe dieses Quadrates in 'neueFarbe'. Gültige Angaben sind
+     * Ändere die Farbe dieses Kreises in 'neueFarbe'. Gültige Angaben sind
      * "rot", "gelb", "blau", "gruen", "lila" und "schwarz".
      */
     public void farbeAendern(String neueFarbe) {
@@ -155,24 +157,25 @@ public class Quadrat {
     }
 
     /**
-     * Zeichne dieses Original.Quadrat mit seinen aktuellen Werten auf den Bildschirm.
+     * Zeichne diesen Original.Kreis mit seinen aktuellen Werten auf den Bildschirm.
      */
     private void zeichnen() {
         if (istSichtbar) {
-            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
-            leinwand.zeichne(this, farbe, new Rectangle(xPosition, yPosition,
-                    groesse, groesse));
+            EigenesAWT.Leinwand leinwand = EigenesAWT.Leinwand.gibLeinwand();
+            leinwand.zeichne(this, farbe, new Ellipse2D.Double(xPosition,
+                    yPosition, durchmesser, durchmesser));
             leinwand.warte(10);
         }
     }
 
     /**
-     * Lösche dieses Original.Quadrat vom Bildschirm.
+     * Lösche diesen Original.Kreis vom Bildschirm.
      */
     private void loeschen() {
         if (istSichtbar) {
-            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
+            EigenesAWT.Leinwand leinwand = EigenesAWT.Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
     }
+
 }

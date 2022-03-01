@@ -162,7 +162,7 @@ public class Dreieck {
      */
     private void zeichnen() {
         if (istSichtbar) {
-            BeisielPedMat.Leinwand leinwand = BeisielPedMat.Leinwand.gibLeinwand();
+            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
             int[] xpoints = { xPosition, xPosition + (breite / 2),
                     xPosition - (breite / 2) };
             int[] ypoints = { yPosition, yPosition + hoehe, yPosition + hoehe };
@@ -176,7 +176,7 @@ public class Dreieck {
      */
     private void loeschen() {
         if (istSichtbar) {
-            BeisielPedMat.Leinwand leinwand = BeisielPedMat.Leinwand.gibLeinwand();
+            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
     }

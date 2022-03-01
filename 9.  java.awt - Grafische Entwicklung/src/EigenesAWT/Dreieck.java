@@ -1,17 +1,19 @@
-package Beispiel;
+package EigenesAWT;
 
 import java.awt.*;
 
 /**
- * Ein Original.Quadrat, das manipuliert werden kann und sich selbst auf einer Original.Leinwand
+ * Ein Original.Dreieck, das manipuliert werden kann und sich selbst auf einer Original.Leinwand
  * zeichnet.
  *
  * @author Michael Kölling und David J. Barnes
  * @version 31.07.2011
  */
 
-public class Quadrat {
-    private int groesse;
+public class Dreieck {
+    private int hoehe;
+
+    private int breite;
 
     private int xPosition;
 
@@ -22,19 +24,19 @@ public class Quadrat {
     private boolean istSichtbar;
 
     /**
-     * Erzeuge ein neues Original.Quadrat mit einer Standardfarbe an einer
-     * Standardposition.
+     * Erzeuge ein Original.Dreieck mit einer Standardfarbe an einer Standardposition.
      */
-    public Quadrat() {
-        groesse = 60;
-        xPosition = 310;
-        yPosition = 120;
-        farbe = "rot";
+    public Dreieck() {
+        hoehe = 60;
+        breite = 70;
+        xPosition = 210;
+        yPosition = 140;
+        farbe = "gruen";
         istSichtbar = false;
     }
 
     /**
-     * Mache dieses Original.Quadrat sichtbar. Wenn es bereits sichtbar ist, tue nichts.
+     * Mache dieses Original.Dreieck sichtbar. Wenn es bereits sichtbar ist, tue nichts.
      */
     public void sichtbarMachen() {
         istSichtbar = true;
@@ -42,7 +44,7 @@ public class Quadrat {
     }
 
     /**
-     * Mache dieses Original.Quadrat unsichtbar. Wenn es bereits unsichtbar ist, tue
+     * Mache dieses Original.Dreieck unsichtbar. Wenn es bereits unsichtbar ist, tue
      * nichts.
      */
     public void unsichtbarMachen() {
@@ -51,44 +53,44 @@ public class Quadrat {
     }
 
     /**
-     * Bewege dieses Original.Quadrat einige Bildschirmpunkte nach rechts.
+     * Bewege dieses Original.Dreieck einige Bildschirmpunkte nach rechts.
      */
     public void nachRechtsBewegen() {
         horizontalBewegen(20);
     }
 
     /**
-     * Bewege dieses Original.Quadrat einige Bildschirmpunkte nach links.
+     * Bewege dieses Original.Dreieck einige Bildschirmpunkte nach links.
      */
     public void nachLinksBewegen() {
         horizontalBewegen(-20);
     }
 
     /**
-     * Bewege dieses Original.Quadrat einige Bildschirmpunkte nach oben.
+     * Bewege dieses Original.Dreieck einige Bildschirmpunkte nach oben.
      */
     public void nachObenBewegen() {
         vertikalBewegen(-20);
     }
 
     /**
-     * Bewege dieses Original.Quadrat einige Bildschirmpunkte nach unten.
+     * Bewege dieses Original.Dreieck einige Bildschirmpunkte nach unten.
      */
     public void nachUntenBewegen() {
         vertikalBewegen(20);
     }
 
     /**
-     * Bewege dieses Original.Quadrat horizontal um 'entfernung' Bildschirmpunkte.
+     * Bewege dieses Original.Dreieck horizontal um 'entfernung' Bildschirmpunkte.
      */
-    public void horizontalBewegen(int distance) {
+    public void horizontalBewegen(int entfernung) {
         loeschen();
-        xPosition += distance;
+        xPosition += entfernung;
         zeichnen();
     }
 
     /**
-     * Bewege dieses Original.Quadrat vertikal um 'entfernung' Bildschirmpunkte.
+     * Bewege dieses Original.Dreieck vertikal um 'entfernung' Bildschirmpunkte.
      */
     public void vertikalBewegen(int entfernung) {
         loeschen();
@@ -97,7 +99,7 @@ public class Quadrat {
     }
 
     /**
-     * Bewege dieses Original.Quadrat langsam horizontal um 'entfernung'
+     * Bewege dieses Original.Dreieck langsam horizontal um 'entfernung'
      * Bildschirmpunkte.
      */
     public void langsamHorizontalBewegen(int entfernung) {
@@ -117,7 +119,7 @@ public class Quadrat {
     }
 
     /**
-     * Bewege dieses Original.Quadrat langsam vertikal um 'entfernung' Bildschirmpunkte.
+     * Bewege dieses Original.Dreieck langsam vertikal um 'entfernung' Bildschirmpunkte.
      */
     public void langsamVertikalBewegen(int entfernung) {
         int delta;
@@ -136,17 +138,18 @@ public class Quadrat {
     }
 
     /**
-     * Ändere die Größe dieses Quadrates in 'neueGroesse'. 'neueGroesse' muss
-     * groesser gleich Null sein.
+     * Ändere die Höhe in 'neueHoehe' und die Breite in 'neueBreite'. Beide
+     * Angaben müssen größer gleich Null sein.
      */
-    public void groesseAendern(int neueGroesse) {
+    public void groesseAendern(int neueHoehe, int neueBreite) {
         loeschen();
-        groesse = neueGroesse;
+        hoehe = neueHoehe;
+        breite = neueBreite;
         zeichnen();
     }
 
     /**
-     * Ändere die Farbe dieses Quadrates in 'neueFarbe'. Gültige Angaben sind
+     * Ändere die Farbe dieses Dreiecks in 'neueFarbe'. Gültige Angaben sind
      * "rot", "gelb", "blau", "gruen", "lila" und "schwarz".
      */
     public void farbeAendern(String neueFarbe) {
@@ -155,23 +158,25 @@ public class Quadrat {
     }
 
     /**
-     * Zeichne dieses Original.Quadrat mit seinen aktuellen Werten auf den Bildschirm.
+     * Zeichne dieses Original.Dreieck mit seinen aktuellen Werten auf den Bildschirm.
      */
     private void zeichnen() {
         if (istSichtbar) {
-            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
-            leinwand.zeichne(this, farbe, new Rectangle(xPosition, yPosition,
-                    groesse, groesse));
+            EigenesAWT.Leinwand leinwand = EigenesAWT.Leinwand.gibLeinwand();
+            int[] xpoints = { xPosition, xPosition + (breite / 2),
+                    xPosition - (breite / 2) };
+            int[] ypoints = { yPosition, yPosition + hoehe, yPosition + hoehe };
+            leinwand.zeichne(this, farbe, new Polygon(xpoints, ypoints, 3));
             leinwand.warte(10);
         }
     }
 
     /**
-     * Lösche dieses Original.Quadrat vom Bildschirm.
+     * Lösche dieses Original.Dreieck vom Bildschirm.
      */
     private void loeschen() {
         if (istSichtbar) {
-            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
+            EigenesAWT.Leinwand leinwand = EigenesAWT.Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
     }
