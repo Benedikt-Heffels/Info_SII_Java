@@ -1,24 +1,32 @@
-package Beispiel;
-import EigenesAWT.Leinwand;
+package EigenesAWT.Verbesserung;
 
-import java.awt.Rectangle;
+
+import java.awt.*;
 
 
 public class Rechteck {
-    private int groessex;
-    private int groessey;
-    private int xPosition;
-    private int yPosition;
-    private String farbe;
+    private int GroesseX;
+    private int GroesseY;
+    private int XPosition;
+    private int YPosition;
+    private String Farbe;
     private boolean istSichtbar;
 
-    public Rechteck() {
-        groessex = 60;
-        groessey = 30;
-        xPosition = 400;
-        yPosition = 120;
-        farbe = "rot";
-        istSichtbar = false;
+    public Rechteck(int groesseX, int groesseY, int xPosition, int yPosition, String farbe) {
+        GroesseX = groesseX;
+        GroesseY = groesseY;
+        XPosition = xPosition;
+        YPosition = yPosition;
+        Farbe = farbe;
+        sichtbarMachen();
+    }
+
+    public void setXPosition(int XPosition) {
+        this.XPosition = XPosition;
+    }
+
+    public void setYPosition(int YPosition) {
+        this.YPosition = YPosition;
     }
 
     public void sichtbarMachen() {
@@ -50,13 +58,13 @@ public class Rechteck {
 
     public void horizontalBewegen(int distance) {
         loeschen();
-        xPosition += distance;
+        XPosition += distance;
         zeichnen();
     }
 
     public void vertikalBewegen(int entfernung) {
         loeschen();
-        yPosition += entfernung;
+        YPosition += entfernung;
         zeichnen();
     }
 
@@ -71,7 +79,7 @@ public class Rechteck {
         }
 
         for (int i = 0; i < entfernung; i++) {
-            xPosition += delta;
+            XPosition += delta;
             zeichnen();
         }
     }
@@ -87,41 +95,41 @@ public class Rechteck {
         }
 
         for (int i = 0; i < entfernung; i++) {
-            yPosition += delta;
+            YPosition += delta;
             zeichnen();
         }
     }
 
     public void groesseAendernx (int neueGroessex)  {
         loeschen();
-        groessex = neueGroessex;
+        GroesseX = neueGroessex;
 
         zeichnen();
     }
 
     public void groesseAenderny (int neueGroessey)  {
         loeschen();
-        groessey = neueGroessey;
+        GroesseY = neueGroessey;
         zeichnen();
     }
 
     public void farbeAendern(String neueFarbe) {
-        farbe = neueFarbe;
+        Farbe = neueFarbe;
         zeichnen();
     }
 
     private void zeichnen() {
         if (istSichtbar) {
-            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
-            leinwand.zeichne(this, farbe, new Rectangle(xPosition, yPosition,
-                    groessex, groessey));
+            EigenesAWT.Verbesserung.Leinwand leinwand = EigenesAWT.Verbesserung.Leinwand.gibLeinwand();
+            leinwand.zeichne(this, Farbe, new Rectangle(XPosition, YPosition,
+                    GroesseX, GroesseY));
             leinwand.warte(10);
         }
     }
 
     private void loeschen() {
         if (istSichtbar) {
-            Beispiel.Leinwand leinwand = Beispiel.Leinwand.gibLeinwand();
+            EigenesAWT.Verbesserung.Leinwand leinwand = EigenesAWT.Verbesserung.Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
     }

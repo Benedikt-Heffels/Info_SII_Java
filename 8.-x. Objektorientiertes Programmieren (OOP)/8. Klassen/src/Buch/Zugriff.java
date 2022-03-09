@@ -1,3 +1,5 @@
+package Buch;
+
 // Auf die Klasse zugreifen
 public class Zugriff {
     public static void main(String[] args) {

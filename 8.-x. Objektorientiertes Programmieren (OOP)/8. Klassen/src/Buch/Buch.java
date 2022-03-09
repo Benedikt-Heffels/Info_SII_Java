@@ -1,3 +1,5 @@
+package Buch;
+
 // Attribute, Methoden, ...
 public class Buch { // Klassenname
     //Konstruktionsvorschrift für unsere Bücher

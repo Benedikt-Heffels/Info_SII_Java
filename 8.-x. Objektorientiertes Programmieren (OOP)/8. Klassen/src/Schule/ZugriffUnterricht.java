@@ -1,3 +1,5 @@
+package Schule;
+
 public class ZugriffUnterricht {
     public static void main(String[] args) {
         Unterricht unterricht = new Unterricht();

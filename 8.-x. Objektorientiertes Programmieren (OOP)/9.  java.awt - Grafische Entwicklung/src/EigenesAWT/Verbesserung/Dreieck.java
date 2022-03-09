@@ -1,4 +1,4 @@
-package EigenesAWT;
+package EigenesAWT.Verbesserung;
 
 import java.awt.*;
 
@@ -162,7 +162,7 @@ public class Dreieck {
      */
     private void zeichnen() {
         if (istSichtbar) {
-            EigenesAWT.Leinwand leinwand = EigenesAWT.Leinwand.gibLeinwand();
+            EigenesAWT.Verbesserung.Leinwand leinwand = EigenesAWT.Verbesserung.Leinwand.gibLeinwand();
             int[] xpoints = { xPosition, xPosition + (breite / 2),
                     xPosition - (breite / 2) };
             int[] ypoints = { yPosition, yPosition + hoehe, yPosition + hoehe };
@@ -176,7 +176,7 @@ public class Dreieck {
      */
     private void loeschen() {
         if (istSichtbar) {
-            EigenesAWT.Leinwand leinwand = EigenesAWT.Leinwand.gibLeinwand();
+            EigenesAWT.Verbesserung.Leinwand leinwand = EigenesAWT.Verbesserung.Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
     }

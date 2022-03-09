@@ -1,3 +1,5 @@
+package Schule;
+
 public class Unterricht {
     private String Fach, Lehrer, Raum;
 
