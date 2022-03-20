@@ -1,7 +1,7 @@
 package Bank;
 
 import huecktechunivers.bank.Bank;
-import huecktechunivers.bank.Lotto;
+import huecktechunivers.Lotto.Lotto;
 
 import java.io.File;
 import java.util.Scanner;

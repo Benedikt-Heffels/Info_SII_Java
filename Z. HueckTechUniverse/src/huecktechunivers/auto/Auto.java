@@ -3,11 +3,11 @@ package huecktechunivers.auto;
 public class Auto {
 
     private String Standort = "Heinsberg";
-    private String [][] LÃ¤nder = {
+    private String [][] Länder = {
             // A
-            {"Abchasien", "Afghanistan", "Ã„gypten", "Albanien", "Algerien", "Andorra", "Angola", "Anguilla",
-                    "Antarktis", "Antigua", "Ã„quatorialguinea", "Argentinien", "Arktis", "Armenien", "Aruba",
-                    "Aserbaidschan", "Ã„thiopien", "Australien", "Azoren"},
+            {"Abchasien", "Afghanistan", "Ägypten", "Albanien", "Algerien", "Andorra", "Angola", "Anguilla",
+                    "Antarktis", "Antigua", "Äquatorialguinea", "Argentinien", "Arktis", "Armenien", "Aruba",
+                    "Aserbaidschan", "Äthiopien", "Australien", "Azoren"},
             //B
             {"Bahamas", "Bahrain", "Bangladesch", "Barbados", "Belarus", "Belgien", "Belize", "Benin", "Bhutan",
                     "Bolivien", "Bosnien und Herzegowina", "Botsuana", "Brasilien", "Brunei", "Bulgarien",
@@ -15,15 +15,15 @@ public class Auto {
             //C
             {"Chile", "China", "Cookinseln", "Costa Rica"},
             //D
-            {"DÃ¤nemark", "Demokratische Republik Kongo", "Deutschland", "Dominica", "Dominikanische Republik",
+            {"Dänemark", "Demokratische Republik Kongo", "Deutschland", "Dominica", "Dominikanische Republik",
                     "Dschibuti"},
             //E
-            {"Ecuador", "ElfenbeinkÃ¼ste", "El Salvador", "Eritrea", "Estland", "Eswatini"},
+            {"Ecuador", "Elfenbeinküste", "El Salvador", "Eritrea", "Estland", "Eswatini"},
             //F
-            {"Falklandinseln", "Fidschi", "Finnland", "FÃ¶derierte Staaten von Mikronesien", "Frankreich",
-                    "FranzÃ¶sisch-Polynesien", "FranzÃ¶sisch-Guayana"},
+            {"Falklandinseln", "Fidschi", "Finnland", "Föderierte Staaten von Mikronesien", "Frankreich",
+                    "Französisch-Polynesien", "Französisch-Guayana"},
             //G
-            {"Gabun", "Gambia", "Georgien", "Ghana", "Grenada", "Griechenland", "GroÃŸbritannien", "GrÃ¶nland",
+            {"Gabun", "Gambia", "Georgien", "Ghana", "Grenada", "Griechenland", "Großbritannien", "Grönland",
                     "Guadeloupe", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana"},
             //H
             {"Haiti", "Honduras"},
@@ -38,31 +38,31 @@ public class Auto {
             {"Laos", "Lesotho", "Lettland", "Libanon", "Liberia", "Libyen", "Liechtenstein", "Litauen", "Luxemburg"},
             //M
             {"Madagaskar", "Madeira", "Malawi", "Malaysia", "Malediven", "Mali", "Malta", "Marokko", "Marshallinseln",
-                    "Martinique", "Mauretanien", "Mauritius", "Mexiko", "(FÃ¶derierte Staaten von) Mikronesien",
+                    "Martinique", "Mauretanien", "Mauritius", "Mexiko", "(Föderierte Staaten von) Mikronesien",
                     "Moldau", "Monaco", "Mongolei", "Montenegro", "Mosambik", "Myanmar"},
             //N
-            {"Namibia", "Nauru", "Nepal", "Neuseeland", "Nicaragua", "Niederlande", "NiederlÃ¤ndische Antillen", "Niger",
+            {"Namibia", "Nauru", "Nepal", "Neuseeland", "Nicaragua", "Niederlande", "Niederländische Antillen", "Niger",
                     "Nigeria", "Nordkorea", "Nordmazedonien", "Nordzypern", "Norwegen"},
             //O
-            {"Oman", "Ã–sterreich", "Osttimor"},
+            {"Oman", "Österreich", "Osttimor"},
             //P
-            {"Pakistan", "Palau", "PalÃ¤stina", "Panama", "Papua-Neuguinea", "Paraguay", "Peru", "Philippinen", "Polen",
+            {"Pakistan", "Palau", "Palästina", "Panama", "Papua-Neuguinea", "Paraguay", "Peru", "Philippinen", "Polen",
                     "Portugal", "Puerto Rico",},
             //R
-            {"RÃ©union", "Ruanda", "RumÃ¤nien", "Russland"},
+            {"Réunion", "Ruanda", "Rumänien", "Russland"},
             //S
             {"Saint Kitts und Nevis", "Saint Lucia", "Saint Pierre und Miquelon", "Saint Vincent und die Grenadinen",
-                    "Salomonen", "Sambia", "Samoa", "San Marino", "SÃ£o TomÃ© und PrÃ­ncipe", "Saudi-Arabien", "Schweden",
+                    "Salomonen", "Sambia", "Samoa", "San Marino", "São Tomé und Príncipe", "Saudi-Arabien", "Schweden",
                     "Schweiz", "Senegal", "Serbien", "Seychellen", "Sierra Leone", "Singapur", "Simbabwe", "Slowakei",
-                    "Slowenien", "Somalia", "Spanien", "Sri Lanka", "SÃ¼dafrika", "Sudan", "SÃ¼dkorea", "SÃ¼dsudan",
+                    "Slowenien", "Somalia", "Spanien", "Sri Lanka", "Südafrika", "Sudan", "Südkorea", "Südsudan",
                     "Suriname", "Syrien"},
             //T
             {"Tadschikistan", "Taiwan", "Tansania", "Thailand", "Togo", "Tokelau", "Tonga", "Trinidad und Tobago",
-                    "Tschad", "Tschechien", "Tunesien", "TÃ¼rkei", "Turkmenistan", "Tuvalu"},
+                    "Tschad", "Tschechien", "Tunesien", "Türkei", "Turkmenistan", "Tuvalu"},
             //U
             {"Uganda", "Ukraine", "Ungarn", "USA", "Uruguay", "Usbekistan"},
             //V
-            {"Vanuatu", "Vatikan", "Venezuela", "Vereinigte Arabische Emirate", "Vereinigtes KÃ¶nigreich",
+            {"Vanuatu", "Vatikan", "Venezuela", "Vereinigte Arabische Emirate", "Vereinigtes Königreich",
                     "Vereinigte Staaten von Amerika", "Vietnam"},
             //W
             {"Wallis und Futuna", "Westsahara"},
@@ -72,7 +72,7 @@ public class Auto {
     private String[][] URIforColors = {
             //Allgemein
             {
-                    "schwarz", "grau", "rot", "weiÃŸ"
+                    "schwarz", "grau", "rot", "weiß"
             },
             //G-Klasse
             {
@@ -97,8 +97,8 @@ public class Auto {
             }
 
     };
-    private int TankfÃ¼llungAktuell = 0;
-    private int MÃ¶glicheTankfÃ¼llung = 0;
+    private int TankfüllungAktuell = 0;
+    private int MöglicheTankfüllung = 0;
     private double Verbrauch100KM = 0;
     private String AutoType = "Not defined";
     private String Farbe = "Schwarz";
@@ -110,7 +110,7 @@ public class Auto {
     }
 
     // --------------------------- SETTER -----------------------------------------
-    public void setMÃ¶glicheTankfÃ¼llung(int mÃ¶glicheTankfÃ¼llung) {MÃ¶glicheTankfÃ¼llung = mÃ¶glicheTankfÃ¼llung;}
+    public void setMöglicheTankfüllung(int möglicheTankfüllung) {MöglicheTankfüllung = möglicheTankfüllung;}
 
     public void setFarbe(String farbe) {Farbe = farbe;}
 
@@ -129,14 +129,14 @@ public class Auto {
     // -------------------------- GETTER -------------------------------------------
     public String getAutoType() {return AutoType;}
 
-    public int getMÃ¶glicheTankfÃ¼llung() {return MÃ¶glicheTankfÃ¼llung;}
+    public int getMöglicheTankfüllung() {return MöglicheTankfüllung;}
 
     public String getFarbe() {
         return Farbe;
     }
 
-    public int getTankfÃ¼llungAktuell() {
-        return TankfÃ¼llungAktuell;
+    public int getTankfüllungAktuell() {
+        return TankfüllungAktuell;
     }
 
     public int getSchaden() {
@@ -149,7 +149,7 @@ public class Auto {
 
     public boolean isAutoDefined() {
         boolean isAutoDefined = false;
-        if (Verbrauch100KM != 0 && !AutoType.equals("Not defined") && MÃ¶glicheTankfÃ¼llung != 0){
+        if (Verbrauch100KM != 0 && !AutoType.equals("Not defined") && MöglicheTankfüllung != 0){
             isAutoDefined = true;
         }
         return isAutoDefined;

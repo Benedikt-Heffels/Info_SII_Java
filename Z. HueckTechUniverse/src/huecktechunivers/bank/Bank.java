@@ -1,5 +1,7 @@
 package huecktechunivers.bank;
 
+import huecktechunivers.allg_funktionen;
+
 import java.io.File;
 import java.util.Scanner;
 
@@ -38,7 +40,7 @@ public class Bank {
                     "\t(4) Programm verlassen"
             );
             if (viaHaupt) {
-                System.out.println("\t(5) ZurÃ¼ck ins Hauptmenue");
+                System.out.println("\t(5) Zurück ins Hauptmenue");
             }
             System.out.println("Nummer eingeben:");
 
@@ -47,7 +49,7 @@ public class Bank {
             kontostand = (int) allg_funktionen.kstd_lesen(strkontopath);
             switch (wahl) {
                 case 1:
-                    System.out.println("Ihr Kontostand: " + kontostand + "â‚¬");
+                    System.out.println("Ihr Kontostand: " + kontostand + "€");
                     break;
                 case 2:
                     funktion = 2;
@@ -59,7 +61,7 @@ public class Bank {
                     else {
                         boolean eingabe_auszahlung = false;
                         do {
-                            System.out.println("Auf ihrem Konto sind nur " + kontostand + "â‚¬. Bitte Ã¤ndern Sie den Betrag!");
+                            System.out.println("Auf ihrem Konto sind nur " + kontostand + "€. Bitte ändern Sie den Betrag!");
                             int auszahlung2 = scanner.nextInt();
                             if (auszahlung2 <= kontostand) {
                                 eingabe_auszahlung = true;
@@ -67,18 +69,18 @@ public class Bank {
                             }
                         } while (!eingabe_auszahlung);
                     }
-                    System.out.println("Ihre Auszahlung in HÃ¶he von " + auszahlung + "â‚¬ ist erfolgt!");
+                    System.out.println("Ihre Auszahlung in Höhe von " + auszahlung + "€ ist erfolgt!");
                     kontostand = (int) allg_funktionen.kstd_lesen(strkontopath);
-                    System.out.println("Ihr Kontostand betrÃ¤gt nun " + kontostand + "â‚¬.");
+                    System.out.println("Ihr Kontostand beträgt nun " + kontostand + "€.");
                     break;
                 case 3:
                     funktion = 1;
                     System.out.println("Wie viel Geld wollen Sie einzahlen?");
                     int einzahlung = scanner.nextInt();
                     allg_funktionen.kstd_veraendern(strkontopath, einzahlung, funktion);
-                    System.out.println("Ihre Einzahlung in HÃ¶he von " + einzahlung + " ist erfolgt!");
+                    System.out.println("Ihre Einzahlung in Höhe von " + einzahlung + " ist erfolgt!");
                     kontostand = (int) allg_funktionen.kstd_lesen(strkontopath);
-                    System.out.println("Ihr Kontostand betrÃ¤gt nun " + kontostand + "â‚¬.");
+                    System.out.println("Ihr Kontostand beträgt nun " + kontostand + "€.");
                     break;
                 case 4:
                     System.exit(0);

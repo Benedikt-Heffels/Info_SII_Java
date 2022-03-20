@@ -8,7 +8,7 @@ import java.net.URI;
 
 
 
-public class AutoHÃ¤ndlerZugriff {
+public class AutoHändlerZugriff {
     private static Scanner scanner = new Scanner(System.in);
     public static Auto autowahlTreffen(Auto auto) {
         boolean go = true;
@@ -67,57 +67,57 @@ public class AutoHÃ¤ndlerZugriff {
 
         auto = new Auto();
         if (autowahl == 1) {
-            System.out.println("Sie haben die haben die G-Klasse gewÃ¤hlt, Ihr neues Auto benÃ¶tigt 15 Liter Benzin auf " +
-                    "Hundert Kilometer, sie haben eine Maximale TankfÃ¼llung von 100 Litern");
+            System.out.println("Sie haben die haben die G-Klasse gewählt, Ihr neues Auto benötigt 15 Liter Benzin auf " +
+                    "Hundert Kilometer, sie haben eine Maximale Tankfüllung von 100 Litern");
             auto.setVerbrauch100KM(15.0);
-            auto.setMÃ¶glicheTankfÃ¼llung(100);
+            auto.setMöglicheTankfüllung(100);
             auto.setAutoType("G-Klasse");
         }
         else if (autowahl == 2) {
-            System.out.println("Sie haben die haben die A-Klasse gewÃ¤hlt, Ihr neues Auto benÃ¶tigt 8 Liter Benzin auf " +
+            System.out.println("Sie haben die haben die A-Klasse gewählt, Ihr neues Auto benötigt 8 Liter Benzin auf " +
                     "Hundert Kilometer");
             auto.setVerbrauch100KM(8.0);
-            auto.setMÃ¶glicheTankfÃ¼llung(66);
+            auto.setMöglicheTankfüllung(66);
             auto.setAutoType("A-Klasse");
         }
 
         else if (autowahl == 3) {
-            System.out.println("Sie haben die haben die E-Klasse gewÃ¤hlt, Ihr neues Auto benÃ¶tigt 11 Liter Benzin auf " +
+            System.out.println("Sie haben die haben die E-Klasse gewählt, Ihr neues Auto benötigt 11 Liter Benzin auf " +
                     "Hundert Kilometer");
             auto.setVerbrauch100KM(11.0);
-            auto.setMÃ¶glicheTankfÃ¼llung(51);
+            auto.setMöglicheTankfüllung(51);
             auto.setAutoType("E-Klasse");
         }
 
         else if (autowahl == 4) {
-            System.out.println("Sie haben die haben die S-Klasse Guard gewÃ¤hlt, Ihr neues Auto benÃ¶tigt 19,5 Liter Benzin auf " +
-                    "Hundert Kilometer und , und ist ein Rund um gepanzertes Fahrzeug, sie kÃ¶nnten sogar einer Bombe " +
+            System.out.println("Sie haben die haben die S-Klasse Guard gewählt, Ihr neues Auto benötigt 19,5 Liter Benzin auf " +
+                    "Hundert Kilometer und , und ist ein Rund um gepanzertes Fahrzeug, sie könnten sogar einer Bombe " +
                     "standhalten, jetzt nur noch auf nach Afghanistan (wenn sie das Wollen).");
             auto.setVerbrauch100KM(19.5);
-            auto.setMÃ¶glicheTankfÃ¼llung(100);
+            auto.setMöglicheTankfüllung(100);
             auto.setAutoType("S-Klasse Guard");
         }
 
         else{
-            System.out.println("Sie haben leider eine ungÃ¼ltige Wahl getroffen");
+            System.out.println("Sie haben leider eine ungültige Wahl getroffen");
         }
         return auto;
     }
 
-    public static Auto farbeÃ„ndern(Auto auto) {
+    public static Auto farbeÄndern(Auto auto) {
         while (true) {
             System.out.println("Willkommen in Ihrer Lackierwerkstatt!");
             if (auto.getAutoType().equals("S-Klasse Guard")) {
-                System.out.println("Leider ist die S-Klasse Guard nur in schwarz verfÃ¼gbar! (AuÃŸer einer " +
+                System.out.println("Leider ist die S-Klasse Guard nur in schwarz verfügbar! (Außer einer " +
                         "zerschossenen S-Klasse Guard) ");
                 break;
             }
-            System.out.println("Bitte geben sie die Nummer Ihrer gewÃ¼nschter Autofarbe fÃ¼r Ihren " + auto.getAutoType()
+            System.out.println("Bitte geben sie die Nummer Ihrer gewünschter Autofarbe für Ihren " + auto.getAutoType()
                     + " hier an: ");
             System.out.println("\t(1) Schwarz");
             System.out.println("\t(2) Grau");
             System.out.println("\t(3) Rot");
-            System.out.println("\t(4) WeiÃŸ");
+            System.out.println("\t(4) Weiß");
             int farbwahl = scanner.nextInt();
             if (farbwahl == 1) {
                 auto.setFarbe("schwarz");
@@ -126,7 +126,7 @@ public class AutoHÃ¤ndlerZugriff {
             } else if (farbwahl == 3) {
                 auto.setFarbe("rot");
             } else if (farbwahl == 4) {
-                auto.setFarbe("weiÃŸ");
+                auto.setFarbe("weiß");
             }
             break;
         }
@@ -137,15 +137,15 @@ public class AutoHÃ¤ndlerZugriff {
         System.out.println("Alle wichtigen Daten:");
         System.out.println("Modell: " + auto.getAutoType());
         System.out.println("Farbe: " + auto.getFarbe());
-        System.out.println("Aktuelle TankfÃ¼llung: " + auto.getTankfÃ¼llungAktuell() + " Liter von " +
-                auto.getMÃ¶glicheTankfÃ¼llung() + " mÃ¶glichen Litern");
+        System.out.println("Aktuelle Tankfüllung: " + auto.getTankfüllungAktuell() + " Liter von " +
+                auto.getMöglicheTankfüllung() + " möglichen Litern");
         System.out.println("Schaden: Das Auto ist zu "  + auto.getSchaden() + " kaputt.");
         return null;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Willkommen beim Mercedes-Benz VertragshÃ¤ndler HueckTech!");
+        System.out.println("Willkommen beim Mercedes-Benz Vertragshändler HueckTech!");
         Auto auto = new Auto();
         boolean go = true;
         while (go) {
@@ -153,19 +153,19 @@ public class AutoHÃ¤ndlerZugriff {
             System.out.println("Was wollen Sie tun?");
             boolean isAutoDefined = auto.isAutoDefined();
             if (!isAutoDefined) {
-                System.out.println("\t(1) Auto wÃ¤hlen");
-                System.out.println("\t(2) Auto wÃ¤hlen, um es zu kaufen");
+                System.out.println("\t(1) Auto wählen");
+                System.out.println("\t(2) Auto wählen, um es zu kaufen");
                 System.out.println("\t(100) HTU verlassen");
-                System.out.println("\t(101) ZurÃ¼ck ins HTU");
+                System.out.println("\t(101) Zurück ins HTU");
             }
             else if (isAutoDefined) {
-                System.out.println("\t(1) Auto Ã¤ndern");
+                System.out.println("\t(1) Auto ändern");
                 System.out.println("\t(2) Aktuelles Auto kaufen");
                 System.out.println("\t(3) Lackieren");
                 System.out.println("\t(4) Auto anzeigen");
                 System.out.println("\t(5) Auto fahren");
                 System.out.println("\t(100) Programm verlassen");
-                System.out.println("\t(101) ZurÃ¼ck ins HTU");
+                System.out.println("\t(101) Zurück ins HTU");
             }
             System.out.println("Bitte Zahl eingeben: ");
             int wahl = scanner.nextInt();
@@ -178,7 +178,7 @@ public class AutoHÃ¤ndlerZugriff {
                 //AUTO KAUFEN
             }
             else if (isAutoDefined && wahl == 3) {
-                farbeÃ„ndern(auto);
+                farbeÄndern(auto);
             }
             else if (isAutoDefined && wahl == 4) {
                 autoAnzeigen(auto);
@@ -188,8 +188,8 @@ public class AutoHÃ¤ndlerZugriff {
             }
             else if (wahl == 100) {
                 System.out.println("Vielen Dank, das Sie dieses Programm zum bestellen Ihres neuen Mercedes-Benz " +
-                        "verwendet haben. Wir wÃ¼nschen Ihnen noch einen schÃ¶nen Tag!");
-                System.out.println("Ihr Mercedes-Benz VertragshÃ¤ndler HueckTech");
+                        "verwendet haben. Wir wünschen Ihnen noch einen schönen Tag!");
+                System.out.println("Ihr Mercedes-Benz Vertragshändler HueckTech");
                 System.out.println("#Let'sMakeDrivingGreatAgain");
                 System.exit(100);
             }

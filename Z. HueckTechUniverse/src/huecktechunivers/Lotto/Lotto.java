@@ -1,4 +1,6 @@
-package huecktechunivers.bank;
+package huecktechunivers.Lotto;
+
+import huecktechunivers.allg_funktionen;
 
 import java.io.File;
 import java.util.Random;

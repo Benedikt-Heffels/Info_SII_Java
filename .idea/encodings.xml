@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/8.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Automat.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/8.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Parker.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/8.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Ticket.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/8.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Zugriff.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/8.-x. Objektorientiertes Programmieren (OOP)/8. Klassen/src/Auto/Auto.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/8.-x. Objektorientiertes Programmieren (OOP)/8. Klassen/src/Auto/Main.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/8.-x. Objektorientiertes Programmieren (OOP)/9.  java.awt - Grafische Entwicklung/src/Beispiel/Leinwand.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/8.-x. Objektorientiertes Programmieren (OOP)/9.  java.awt - Grafische Entwicklung/src/EigenesAWT/Leinwand.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/Auto/Auto.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/Auto/Main.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/huecktechunivers/allg_funktionen.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/huecktechunivers/allg_funktionen.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/huecktechunivers/auto/Auto.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/huecktechunivers/auto/AutoHändlerZugriff.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/huecktechunivers/bank/Bank.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/huecktechunivers/hauptmenue.java" charset="windows-1252" />
   </component>
 </project>
