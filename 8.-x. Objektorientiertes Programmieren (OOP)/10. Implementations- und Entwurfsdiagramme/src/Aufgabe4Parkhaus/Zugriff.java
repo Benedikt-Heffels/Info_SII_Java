@@ -1,15 +1,14 @@
 package Aufgabe4Parkhaus;
-
 import java.util.Scanner;
 
 public class Zugriff {
-    public static void global(Aufgabe4Parkhaus.Ticket paramTicket){
+    public static void global(Ticket paramTicket){
     }
     public static void main(String[] args) {
-        Aufgabe4Parkhaus.Automat Automat = new Aufgabe4Parkhaus.Automat();
-        Aufgabe4Parkhaus.Parker Parker = new Aufgabe4Parkhaus.Parker();
+        Automat Automat = new Automat();
+        Parker Parker = new Parker();
         System.out.println("Herzlich Willkommen bei HueckTechParking!");
-        System.out.println("Der Parkpreis pro angefangene Stunde beträgt " + Automat.getParkpreisPerHour() + " €");
+        System.out.println("Der Parkpreis pro angefangene Stunde beträgt " + Automat.getParkpreisPerHour() + " €.");
         System.out.println("Wichtig: Dieses Parkhaus erlaubt kein Nachtparken und schließt von 24:00 bis 06:00 Uhr!");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Zum fortfahren ENTER drücken");

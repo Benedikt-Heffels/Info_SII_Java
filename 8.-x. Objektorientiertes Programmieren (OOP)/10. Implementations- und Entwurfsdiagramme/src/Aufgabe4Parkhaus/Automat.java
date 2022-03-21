@@ -3,10 +3,12 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 public class Automat {
-    public Automat(){}
     private static String AktuelleZeit;
     private double ParkpreisPerHour = 1.50;
     private static String Startzeit = "xx:xx:xx";
+
+    public Automat(){}
+
 
     public static void setAktuelleZeit(String aktuelleZeit) {  //ONLYFORPEDMAT
         AktuelleZeit = aktuelleZeit;
@@ -85,8 +87,8 @@ public class Automat {
 
     public static void ticketAusgeben(){}
 
-    public static Aufgabe4Parkhaus.Ticket newTicket(boolean ONLYFORPEDMAT){
-        Aufgabe4Parkhaus.Ticket ticket = new Aufgabe4Parkhaus.Ticket();
+    public static Ticket newTicket(boolean ONLYFORPEDMAT){
+        Ticket ticket = new Ticket();
         if(!ONLYFORPEDMAT){ //IF ONLYFORPEDMAT == true, ist die Startzeit vordefiniert
             Startzeit = setAktuelleUhrzeit();
         }
