@@ -1,13 +1,13 @@
 package Aufgabe2Fuﬂball;
-
 import java.util.Random;
+import java.util.Scanner;
 
 public class Schiedsrichter {
     public Schiedsrichter () {}
+    private static String NameSchiri;
+    private static Scanner scanner = new Scanner(System.in);
 
-    private String aktuelleKarte = "NONE";
-
-    public void Karte_zeigen(String karte, String spieler) {
+    public static void karteZeigen() {
         System.out.println("Welche Karte?");
         System.out.println("\t(1) Rote Karte");
         System.out.println("\t(2) Gelbe Karte");
@@ -26,5 +26,9 @@ public class Schiedsrichter {
             System.out.println("Schiri, wir wissen wo dein... - dass du nicht fangen kannst!");
         }
         return entscheidung;
+    }
+
+    public static void Pfeifen (){
+        System.out.println("Der Schiedsrichter pfeifft!");
     }
 }

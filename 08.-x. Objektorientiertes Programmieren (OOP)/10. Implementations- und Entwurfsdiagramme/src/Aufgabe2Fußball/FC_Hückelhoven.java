@@ -52,7 +52,7 @@ public class FC_Hückelhoven {
                 System.out.println("Da ist ein Fahrrad. Auf dem Fußballplatz! Ein schöner Sprint wird damit zurückgelegt - und dann dieser Pass mit dem Frontreifen. Leider nicht angenommen durch den Angespielten, Schade. Trotzdem: Beim Laufsport hat das Fahrrad nichts zu suchen!");
                 break;
             case 7:
-                System.out.println("David vollzieht eine exotherme Redoxreaktion. Die dadurch entstandene Explosion stößt den Ball ins gegnerische Tor! Das ist natürlich auch ein weg, Tore zu erziehlen - aber etwas zu gefährlich für uns.");
+                System.out.println("David vollzieht eine exotherme Redoxreaktion. Die dadurch entstandene Explosion stößt den Ball ins gegnerische Tor! Das ist natürlich auch ein Weg, Tore zu erziehlen - aber etwas zu gefährlich für dieses Fußballspiel.");
                 ToreFC = ToreFC + 1;
                 break;
             case 8:
