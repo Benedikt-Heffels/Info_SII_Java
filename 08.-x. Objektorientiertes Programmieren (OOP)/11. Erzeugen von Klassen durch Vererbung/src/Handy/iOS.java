@@ -17,7 +17,8 @@ public class iOS extends Handy{
             Thread.sleep(10);
         }
         catch (Exception e) {
-            System.exit(130);
+            e.printStackTrace();
+            System.exit(1);
         }
         Handy.Aktivität = true;
     }

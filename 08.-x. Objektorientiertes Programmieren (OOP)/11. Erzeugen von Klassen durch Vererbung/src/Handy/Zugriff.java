@@ -3,6 +3,8 @@ package Handy;
 import java.util.Scanner;
 
 public class Zugriff {
+    private static Handy handy = new Handy();
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean needwelcome = Handy.isHandyDefined();
@@ -11,7 +13,8 @@ public class Zugriff {
         }
         System.out.println("Bitte schalten Sie zunächst Ihr Handy ein!");
         String fortfahren = scanner.nextLine();
-        Handy.setAktivität();
+        handy.setAktivität();
+        System.out.println("Durchgang1");
         Android.xiaomiSpecial();
         boolean go = true;
         while (go) {
@@ -22,17 +25,16 @@ public class Zugriff {
             int wahl = scanner.nextInt();
             switch (wahl) {
                 case 1:
-                    Handy.übernachtungBuchen();
+                    handy.übernachtungBuchen();
                     break;
                 case 100:
-                    Handy.setAktivität();
+                    handy.setAktivität();
             }
         }
     }
     public static void welcome (){
         System.out.println("Herzlich Willkommen im Handy-Manager!");
-        Handy handy = new Handy();
-        Handy.setHandy();
+        handy.setHandy();
     }
     public static void deaktiv (){
         System.out.println("Das Handy ist deaktiviert!");

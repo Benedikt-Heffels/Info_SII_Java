@@ -18,10 +18,10 @@ public class Handy {
         if (marke.equals(Marken[0][0]) || marke.equals(Marken[1][0]) || marke.equals(Marken[2][0]) || marke.equals(Marken[3][0])) {
             Type[2] = marke;
             if (marke.equals("Apple")) {
-                Type[1] = "iOS";
+                Type[0] = "iOS";
             }
             else{
-                Type[1] = "Android";
+                Type[0] = "Android";
             }
         }
         else {
@@ -63,15 +63,22 @@ public class Handy {
         }
 
     }
-    public static void setAktivität (){
-        if (!Aktivität) {
+    public static void setAktivität (){ //ERROR: Die gesamte Methode wird als Schleife ausgeführt!
+        //Begründung des Fehlers: Nur wenn iOS/Android sub-Datei aufgerufen wird, beginnt das Programm mit dem Schleifendurchlauf.
+        //Ohne diesen Aufruf tut das Programm dies nicht
+        //-> FEHLER IN DEN SUB-DATEIEN?
+        System.out.println("VOR1");
+        if (Aktivität == false) {
             System.out.println("if1");
             if (Type[0].equals("iOS")) {
+                System.out.println("else1iOS");
+                iOS iOS = new iOS();
                 iOS.setAktivität();
+                //iOS.setAktivität();
             }
             else {
-                System.out.println("else1"); //ERROR: Scheinbar wird dies als Schleife ausgeführt?
-                Android.setAktivität();
+                System.out.println("else1ANDROID");
+                //Android.setAktivität();
             }
         }
         else {
