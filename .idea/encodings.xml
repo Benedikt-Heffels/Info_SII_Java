@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/08. Klassen/src/Auto/Auto.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/08. Klassen/src/Auto/Main.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/09.  java.awt - Grafische Entwicklung/src/Beispiel/Leinwand.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/09.  java.awt - Grafische Entwicklung/src/EigenesAWT/Leinwand.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/FC_Hückelhoven.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/KarteRot.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/SV_HueckHaupt.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/Schiedsrichter.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/Spiel.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/Spieler.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/Zugriff.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/ZugriffNeu.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Automat.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Parker.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Ticket.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Zugriff.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/08.-x. Objektorientiertes Programmieren (OOP)/14. Sortierverfahren/src/EigenesVerfahren.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/08. Klassen/src/Auto/Auto.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/08. Klassen/src/Auto/Main.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/09.  java.awt - Grafische Entwicklung/src/Beispiel/Leinwand.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/09.  java.awt - Grafische Entwicklung/src/EigenesAWT/Leinwand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/FC_Hückelhoven.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/KarteRot.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/SV_HueckHaupt.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/Schiedsrichter.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/Spiel.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/Spieler.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/Zugriff.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe2Fußball/ZugriffNeu.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Automat.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Parker.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Ticket.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/10. Implementations- und Entwurfsdiagramme/src/Aufgabe4Parkhaus/Zugriff.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/02. EF/08.-x. Objektorientiertes Programmieren (OOP)/14. Sortierverfahren/src/EigenesVerfahren.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/Auto/Auto.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/Auto/Main.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/Z. HueckTechUniverse/src/huecktechunivers/allg_funktionen.java" charset="windows-1252" />

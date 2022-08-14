@@ -1,6 +1,5 @@
 package Aufgabe4Parkhaus;
 import java.time.*;
-import java.time.format.DateTimeFormatter;
 
 public class Automat {
     private static String AktuelleZeit;
