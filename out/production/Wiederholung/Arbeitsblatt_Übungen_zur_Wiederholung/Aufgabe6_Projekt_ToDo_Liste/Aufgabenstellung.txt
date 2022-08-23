@@ -1,0 +1,11 @@
+Projekt To Do Liste
+Eine To DO Liste soll mit dem Rechner verwaltet werden, weshalb eine entsprechende Klasse deklariert werden soll.
+
+Eine To DO Liste soll dabei als erstes Attribut einen Array besitzen, der Elemente einer ebenfalls neu zu definierenden Klasse Aufgabe enthält,
+und als weiteres Attribut die Anzahl der aktuell aufgenommenen Aufgaben.
+
+Eine Aufgabe soll aus einer Beschreibung sowie einer Priorität (niedrig, mittel, hoch) bestehen.
+Aufgaben mit höherer Priorität sollen bevorzugt abgearbeitet werden, Aufgaben mit gleicher Priorität der Reihenfolge ihres Eintrags entsprechend.
+
+Die To Do Liste soll außerdem mittels einer Methode eine neue Aufgabe in die Liste aufnehmen können.
+Auch soll die erste Aufgabe angezeigt sowie (ggf. erst im Anschluss) gelöscht werden dürfen.

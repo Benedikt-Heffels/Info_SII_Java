@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/03. Q1/00. Wiederholung EF.iml" filepath="$PROJECT_DIR$/03. Q1/00. Wiederholung EF.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/01. HelloWorld/01. HelloWorld.iml" filepath="$PROJECT_DIR$/02. EF/01. HelloWorld/01. HelloWorld.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/01.1 Einfacher Rechner/01.1 Einfacher Rechner.iml" filepath="$PROJECT_DIR$/02. EF/01.1 Einfacher Rechner/01.1 Einfacher Rechner.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/02. Datentypen und Variablen/02. Datentypen und Variablen.iml" filepath="$PROJECT_DIR$/02. EF/02. Datentypen und Variablen/02. Datentypen und Variablen.iml" />
@@ -34,6 +35,8 @@
       <module fileurl="file://$PROJECT_DIR$/HA - Datentypen und Variablen/HA - Datentypen und Variablen.iml" filepath="$PROJECT_DIR$/HA - Datentypen und Variablen/HA - Datentypen und Variablen.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Info_SII_Java.iml" filepath="$PROJECT_DIR$/.idea/Info_SII_Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Z. HueckTech/Versionsverlauf/Versionsverlauf.iml" filepath="$PROJECT_DIR$/Z. HueckTech/Versionsverlauf/Versionsverlauf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03. Q1/Wiederholung/Wiederholung.iml" filepath="$PROJECT_DIR$/03. Q1/Wiederholung/Wiederholung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03. Q1/Wiederholung EF.iml" filepath="$PROJECT_DIR$/03. Q1/Wiederholung EF.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/X. Klausuruebungen/X. Klausuruebungen.iml" filepath="$PROJECT_DIR$/02. EF/X. Klausuruebungen/X. Klausuruebungen.iml" />
       <module fileurl="file://$PROJECT_DIR$/Y. Other Programs/Y. Other Programs.iml" filepath="$PROJECT_DIR$/Y. Other Programs/Y. Other Programs.iml" />
       <module fileurl="file://$PROJECT_DIR$/Z. HueckTech/Z. HueckTech.iml" filepath="$PROJECT_DIR$/Z. HueckTech/Z. HueckTech.iml" />
