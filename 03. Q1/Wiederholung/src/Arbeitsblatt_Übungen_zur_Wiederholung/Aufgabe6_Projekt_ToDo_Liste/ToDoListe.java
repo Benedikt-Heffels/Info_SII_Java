@@ -97,7 +97,7 @@ public class ToDoListe {
         boolean eintragungErledigt = false;
         String ePrio = "";
         System.out.println("Bitte geben Sie zunächst die Priorität der Aufgabe an (hoch/mittel/niedrig): ");
-        ePrio = scanner.nextLine(); //Buck: Nach Fehler: Aufgabe löschen -> Aufgabe löschen -> lässt sich hier keine Angabe mehr machen
+        ePrio = scanner.nextLine(); //Bug: Nach Fehler: Aufgabe löschen -> Aufgabe löschen -> lässt sich hier keine Angabe mehr machen
         int prio = 0;
         if (ePrio.equals("hoch")){
             prio = 0;
