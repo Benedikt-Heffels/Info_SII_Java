@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_03_Passwort.PW_Controller">
+    <children>
+        <GridPane prefHeight="400.0" prefWidth="600.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="48.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="560.0" minWidth="10.0" prefWidth="552.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextArea nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" text="Herzlich Willkommen im WLAN-Manager des Gymnasiums Hückelhoven!&#10;Bitte geben Sie Ihren persönlichen Benutzernamen und Passwort an, um Zugriff zu erhalten!" GridPane.columnIndex="1" />
+                <TextField alignment="CENTER_RIGHT" text="BN" GridPane.rowIndex="1" />
+                <TextField alignment="CENTER_RIGHT" text="PW" GridPane.rowIndex="2" />
+                <PasswordField fx:id="passwordField" text="password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="textFieldBN" text="Benutzername" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <CheckBox fx:id="checkBoxUA" mnemonicParsing="false" text="User Agreement: Ich akzeptiere die Nutzungsbedingungen." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="buttonZugriff" mnemonicParsing="false" text="Zugriff" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="labelZugriff" prefHeight="17.0" prefWidth="565.0" text="Benutzername und Passwort eingeben." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
+

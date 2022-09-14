@@ -12,10 +12,10 @@ public class hauptmenue {
             int wahl = Integer.valueOf(scanner.next());
             switch (wahl) {
                 case 1:
-                    Bank.main(); //ERROR
+                    //Bank.main(); //ERROR
                     break;
                 case 2:
-                    Lotto.main(); //ERROR
+                    //Lotto.main(); //ERROR
                     break;
             }
             go = false;
