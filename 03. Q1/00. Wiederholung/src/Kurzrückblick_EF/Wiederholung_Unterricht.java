@@ -1,3 +1,5 @@
+package Kurzrückblick_EF;
+
 import java.util.Scanner;
 
 public class Wiederholung_Unterricht {

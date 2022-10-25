@@ -1,4 +1,4 @@
-package Arbeitsblatt_Übungen_zur_Wiederholung.Aufgabe6_Projekt_ToDo_Liste;
+package Arbeitsblatt_Übungen_zur_Wiederholung.Aufgabe6.Projekt_ToDo_Liste;
 
 public class Aufgaben extends ToDoListe{
 

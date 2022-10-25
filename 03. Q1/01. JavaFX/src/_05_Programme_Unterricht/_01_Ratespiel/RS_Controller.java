@@ -41,9 +41,5 @@ public class RS_Controller {
         else if (Integer.valueOf(tf_Eingabe.getText().toString()) > gesuchteZahl) {
             lbl_Lösung.setText("Die gesuchte Zahl ist kleiner als Ihre Eingabe!");
         }
-        else{ //Die Kontroll-Abfrage verursacht noch Fehler!
-            lbl_Lösung.setText("Eingabe konnte nicht gelesen werden! Bitte geben Sie eine Zahl zwischen 0 und 100 ein!");
-            anzahlVersuche -= 1;
-        }
     }
 }
