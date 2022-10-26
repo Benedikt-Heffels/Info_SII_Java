@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="428.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Liste._02_Queue.Queue_Controller">
+   <children>
+      <Button fx:id="btQueue" layoutX="35.0" layoutY="29.0" mnemonicParsing="false" onAction="#btQueue_onClick" prefHeight="30.0" prefWidth="74.0" text="Queue" />
+      <Button fx:id="btIsEmpty" disable="true" layoutX="35.0" layoutY="70.0" mnemonicParsing="false" onAction="#btIsEmpty_click" prefHeight="30.0" prefWidth="74.0" text="isEmpty" />
+      <Button fx:id="btEnqueue" disable="true" layoutX="35.0" layoutY="112.0" mnemonicParsing="false" onAction="#btEnqueue_onClick" prefHeight="30.0" prefWidth="74.0" text="enque" />
+      <Button fx:id="btDequeue" disable="true" layoutX="35.0" layoutY="154.0" mnemonicParsing="false" onAction="#btDequeue_click" prefHeight="30.0" prefWidth="74.0" text="deque" />
+      <Button fx:id="btFront" disable="true" layoutX="35.0" layoutY="195.0" mnemonicParsing="false" onAction="#btFront_click" prefHeight="30.0" prefWidth="74.0" text="front" />
+      <TextField fx:id="tfEnqueue" layoutX="123.0" layoutY="115.0" prefHeight="25.0" prefWidth="74.0" />
+      <TextField fx:id="tfIsEmpty" layoutX="123.0" layoutY="73.0" prefHeight="25.0" prefWidth="74.0" />
+      <TextField fx:id="tfFront" layoutX="123.0" layoutY="198.0" prefHeight="25.0" prefWidth="74.0" />
+      <ListView fx:id="listView" layoutX="123.0" layoutY="267.0" prefHeight="133.0" prefWidth="74.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+UPN
+umgekehrte Polnische Notation
+
+Operator steht hinter den Operanden -> erst Operanden dann Operator
+
+1+2 -> 1 2 +
+3+24*4 -> 3 24 + 4 *
+12*319+17+7 -> 12 310 * 17 + 7 +
+
+Stack-Umsetzung: "Zahl drauf, bei Operatoren verrechnen und Ergebnis drauf."
