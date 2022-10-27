@@ -1,0 +1,104 @@
+package Liste._02_Queue._B_Anwendung_Arztpraxis;
+
+import Liste._02_Queue.Queue;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+
+public class AP_Controller {
+    @FXML private Button btStart; //Praxis öffnen
+    @FXML private Button btIsEmpty; //Wartezimmer gefüllt
+    @FXML private Button btEnqueue; //Patient ins Wartezimmer
+    @FXML private Button btFront; //Nächster Patient
+    @FXML private Button btDequeue; //Nächster Patient ins Artzzimmer
+    @FXML private Button btNotfall; //Patient an den Anfang der Schlange setzen
+
+    @FXML private Label lblIsEmpty;
+    @FXML private Label lblFront;
+
+    @FXML private TextField tfEnqueue;
+    @FXML private TextField tfNotfall;
+
+    @FXML private ListView lvWartezimmer;
+
+    private AP_Queue <String> queuePatienten;
+
+    public void btStart_onClick() {
+        btIsEmpty.setDisable(false);
+        btEnqueue.setDisable(false);
+        btFront.setDisable(false);
+        btDequeue.setDisable(false);
+        btNotfall.setDisable(false);
+
+        lblIsEmpty.setDisable(false);
+        lblFront.setDisable(false);
+
+        tfEnqueue.setDisable(false);
+        tfNotfall.setDisable(false);
+
+        lvWartezimmer.getItems().clear();
+        lvWartezimmer.setDisable(false);
+
+        queuePatienten = new AP_Queue<>();
+    }
+
+    public void btIsEmpty_onClick(){
+        if (queuePatienten.isEmpty()){
+            lblIsEmpty.setText("Wartezimmer leer!");
+        }
+        else {
+            lblIsEmpty.setText("Patienten im Wartezimmer!");
+        }
+    }
+
+    public void btEnqueue_onClick(){
+        String neuerPatient = tfEnqueue.getText();
+        queuePatienten.enqueue(neuerPatient);
+        gibAus();
+    }
+
+    public void btDequeue_onClick(){
+        queuePatienten.dequeue();
+        gibAus();
+    }
+
+    public void btFront_onClick(){
+        if (queuePatienten.isEmpty()){
+            lblFront.setText("Wartezimmer leer!");
+        }
+        else {
+            if (queuePatienten.front().substring(0, 20).equals("[PRIORITY/EMERGENCY]")) { //Beugung der Queue-Regeln
+                lblFront.setText(String.valueOf(queuePatienten.front()).substring(21)); //Der Titel [PRIORITY/EMERGENCY] wird entfernt
+            }
+            else lblFront.setText(String.valueOf(queuePatienten.front()));
+        }
+    }
+
+    public void btNotfall_onClick(){
+        String notfallPatient = "[PRIORITY/EMERGENCY] " + tfNotfall.getText();
+        queuePatienten.frontEnqueue(notfallPatient);
+        gibAus();
+    }
+
+    public void gibAus(){
+        AP_Queue <String> queuePatientenKopie = new AP_Queue<>();
+        //ListView löschen
+        lvWartezimmer.getItems().clear();
+        //Listview über Hilfsqueue rekonstruieren, Queue löschen
+        while (!queuePatienten.isEmpty()){
+            lvWartezimmer.getItems().add(queuePatienten.front());
+            queuePatientenKopie.enqueue(queuePatienten.front());
+            queuePatienten.dequeue();
+        }
+        //Queue rekonstruieren, Hilfsqueue löschen
+        while (!queuePatientenKopie.isEmpty()){
+            queuePatienten.enqueue(queuePatientenKopie.front());
+            queuePatientenKopie.dequeue();
+        }
+        btIsEmpty_onClick();
+        btFront_onClick();
+    }
+}
