@@ -52,7 +52,10 @@ public class MY_Queue<ContentType> {
     public void dequeue() {
         if (!isEmpty()) {
             head  = head.getNext();
-            
+            if (this.isEmpty()){ //Ergänzung aus Vergleichsdokument
+                head = null;
+                tail = null;
+            }
         }
     }
 
