@@ -29,7 +29,7 @@
             <Label fx:id="lblIsEmpty" alignment="CENTER" disable="true" prefHeight="17.0" prefWidth="159.0" text="Wartezimmer leer!" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Button fx:id="btEnqueue" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#btEnqueue_onClick" prefHeight="25.0" prefWidth="178.0" text="Patient ins Wartezimmer" GridPane.rowIndex="2" />
             <Button fx:id="btFront" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#btFront_onClick" prefHeight="25.0" prefWidth="172.0" text="Nächster Patient" GridPane.rowIndex="3" />
-            <Button fx:id="btDequeue" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#btDequeue_onClick" prefHeight="25.0" prefWidth="181.0" text="Nächster ins Artzzimer" GridPane.rowIndex="4" />
+            <Button fx:id="btDequeue" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#btDequeue_onClick" prefHeight="25.0" prefWidth="181.0" text="Nächster ins Arztzimmer" GridPane.rowIndex="4" />
             <Label fx:id="lblFront" alignment="CENTER" disable="true" prefHeight="17.0" prefWidth="185.0" text="Wartezimmer leer!" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="tfEnqueue" alignment="CENTER" disable="true" text="Eingabe" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Button fx:id="btNotfall" disable="true" mnemonicParsing="false" onAction="#btNotfall_onClick" prefHeight="25.0" prefWidth="154.0" text="Notfall/PKV" GridPane.rowIndex="5" />

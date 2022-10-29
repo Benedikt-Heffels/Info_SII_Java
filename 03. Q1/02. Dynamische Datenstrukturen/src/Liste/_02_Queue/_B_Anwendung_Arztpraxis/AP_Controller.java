@@ -11,7 +11,7 @@ public class AP_Controller {
     @FXML private Button btIsEmpty; //Wartezimmer gefüllt
     @FXML private Button btEnqueue; //Patient ins Wartezimmer
     @FXML private Button btFront; //Nächster Patient
-    @FXML private Button btDequeue; //Nächster Patient ins Artzzimmer
+    @FXML private Button btDequeue; //Nächster Patient ins Arztzimmer
     @FXML private Button btNotfall; //Patient an den Anfang der Schlange setzen
 
     @FXML private Label lblIsEmpty;
