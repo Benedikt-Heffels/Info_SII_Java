@@ -30,7 +30,6 @@ public class AP_Controller {
         btIsEmpty.setDisable(false);
         btEnqueue.setDisable(false);
         btFront.setDisable(false);
-        btDequeue.setDisable(false);
         btNotfall.setDisable(false);
 
         lblIsEmpty.setDisable(false);
@@ -48,9 +47,11 @@ public class AP_Controller {
     public void btIsEmpty_onClick(){
         if (queuePatienten.isEmpty()){
             lblIsEmpty.setText("Wartezimmer leer!");
+            btDequeue.setDisable(true);
         }
         else {
             lblIsEmpty.setText("Patienten im Wartezimmer!");
+            btDequeue.setDisable(false);
         }
     }
 
@@ -58,6 +59,7 @@ public class AP_Controller {
         String neuerPatient = tfEnqueue.getText();
         queuePatienten.enqueue(neuerPatient);
         gibAus();
+        tfEnqueue.setText("");
     }
 
     public void btDequeue_onClick(){
@@ -70,17 +72,20 @@ public class AP_Controller {
             lblFront.setText("Wartezimmer leer!");
         }
         else {
-            if (queuePatienten.front().substring(0, 20).equals("[PRIORITY/EMERGENCY]")) { //Beugung der Queue-Regeln
-                lblFront.setText(String.valueOf(queuePatienten.front()).substring(21)); //Der Titel [PRIORITY/EMERGENCY] wird entfernt
+            if (queuePatienten.front().length() >= 20){ //Abfrage aus nächster Zeile zuerst (Anfang == [PRIORITY/EMERGENCY] würde Fehler auslösen (Substring anwendung bei kürzeren Strings)
+                if (queuePatienten.front().substring(0, 20).equals("[PRIORITY/EMERGENCY]")) { //Beugung der Queue-Regeln
+                    lblFront.setText(String.valueOf(queuePatienten.front()).substring(21)); //Der Titel [PRIORITY/EMERGENCY] wird entfernt
+                }
             }
             else lblFront.setText(String.valueOf(queuePatienten.front()));
         }
     }
 
-    public void btNotfall_onClick(){
+    public void btNotfall_onClick(){ //Methode, um Patienten an den Anfang der Queue zu setzen
         String notfallPatient = "[PRIORITY/EMERGENCY] " + tfNotfall.getText();
         queuePatienten.frontEnqueue(notfallPatient);
         gibAus();
+        tfNotfall.setText("");
     }
 
     public void gibAus(){
