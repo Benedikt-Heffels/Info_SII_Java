@@ -1,7 +1,5 @@
 package Liste._02_Queue._B_Anwendung_Arztpraxis;
 
-import Liste._02_Queue.Queue;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
