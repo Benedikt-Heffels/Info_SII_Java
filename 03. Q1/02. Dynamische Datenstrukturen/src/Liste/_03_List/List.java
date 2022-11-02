@@ -123,7 +123,9 @@ public class List<ContentType> {
     public void remove() {
         if (hasAccess()){
             //ListNode pListNode = new ListNode(current.getContentType());
-
+            ListNode nextNode = current.getNextNode();
+            current = null;
+            current = nextNode;
         }
     }
 
