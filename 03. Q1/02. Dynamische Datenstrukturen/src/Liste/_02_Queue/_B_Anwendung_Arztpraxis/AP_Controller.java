@@ -6,6 +6,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
+/**
+ * @author Benedikt Heffels
+ */
+
 public class AP_Controller {
     @FXML private Button btStart; //Praxis öffnen
     @FXML private Button btIsEmpty; //Wartezimmer gefüllt

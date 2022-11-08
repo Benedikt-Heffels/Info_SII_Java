@@ -1,4 +1,14 @@
+/**
+ * @author Benedikt Heffels
+ * @version 1.1.1
+ */
+
 package Liste._02_Queue._B_Anwendung_Arztpraxis;
+
+/**
+ * Implementierung der Klasse AP_Queue
+ * @param <ContentType>
+ */
 
 public class AP_Queue<ContentType> {
 	private class QueueNode {
@@ -26,14 +36,26 @@ public class AP_Queue<ContentType> {
 	private QueueNode head;
 	private QueueNode tail;
 
+	/**
+	 * Konstruktor der Klasse AP_Queue
+	 */
+
 	public AP_Queue() {
 		head = null;
 		tail = null;
 	}
 
+	/**
+	 * @return head: Existiert ein erstes Element?
+	 */
 	public boolean isEmpty() {
 		return head == null;
 	}
+
+	/**
+	 * Fügt ein Element am Ende der Queue hinzu
+	 * @param pContent
+	 */
 
 	public void enqueue(ContentType pContent) {
 		if (pContent != null) {
@@ -48,6 +70,10 @@ public class AP_Queue<ContentType> {
 		}
 	}
 
+	/**
+	 * Entfernt das erste Element
+	 */
+
 	public void dequeue() {
 		if (!this.isEmpty()) {
 			head = head.getNext();
@@ -57,6 +83,11 @@ public class AP_Queue<ContentType> {
 			}
 		}
 	}
+
+	/**
+	 * Fügt ein neues Element am Anfang der Queue hinzu
+	 * @param pContent
+	 */
 
 	public void frontEnqueue(ContentType pContent){ //Beugung der Queue-Regeln dür Anwendung
 		QueueNode newNode = new QueueNode(pContent);
@@ -69,6 +100,10 @@ public class AP_Queue<ContentType> {
 		}
 	}
 
+	/**
+	 *
+	 * @return head.getContent(): Gibt Inhalt des ersten Objekts zurück
+	 */
 	public ContentType front() {
 		if (this.isEmpty()) {
 			return null;
