@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/03. Q1/02. Dynamische Datenstrukturen/src/Liste/_02_Queue/_B_Anwendung_Arztpraxis/JavaDoc" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/03. Q1/02. Dynamische Datenstrukturen/src/Liste/_03_List/Erweitert/JavaDoc" />
     <option name="OPTION_SCOPE" value="package" />
     <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
