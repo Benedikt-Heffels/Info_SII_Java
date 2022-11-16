@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import jdk.jfr.ContentType;
 
 public class List_Controller {
     @FXML private TextField tfIsEmpty;
@@ -11,9 +12,12 @@ public class List_Controller {
     @FXML private TextField tfSetContent;
     @FXML private TextField tfAppend;
     @FXML private TextField tfInsert;
-
     @FXML private TextField tfCount;
+    @FXML private TextField tfDurchschnitt;
+
     @FXML private ListView lv;
+
+    @FXML private Button btIntegerList;
     @FXML private Button btIsEmpty;
     @FXML private Button btHasAccess;
     @FXML private Button btNext;
@@ -27,14 +31,16 @@ public class List_Controller {
     @FXML private Button btRemove;
     @FXML private Button btTausche;
     @FXML private Button btUmdrehen;
-
     @FXML private Button btCount;
+    @FXML private Button btDurchschnitt;
 
-    private List<String> list;
+
+    private List list;
 
     public void btList_click() {
         list = new List<String>();
         gibAus();
+
         btIsEmpty.setDisable(false);
         btHasAccess.setDisable(false);
         btNext.setDisable(false);
@@ -49,6 +55,46 @@ public class List_Controller {
         btCount.setDisable(false);
         btTausche.setDisable(false);
         btUmdrehen.setDisable(false);
+
+        tfIsEmpty.setDisable(false);
+        tfHasAccess.setDisable(false);
+        tfGetContent.setDisable(false);
+        tfSetContent.setDisable(false);
+        tfAppend.setDisable(false);
+        tfInsert.setDisable(false);
+        tfCount.setDisable(false);
+    }
+
+    public void btIntegerList_click(){
+        list = new List<String>();
+        gibAus();
+
+        btIsEmpty.setDisable(false);
+        btHasAccess.setDisable(false);
+        btNext.setDisable(false);
+        btToFirst.setDisable(false);
+        btToLast.setDisable(false);
+        btGetContent.setDisable(false);
+        btSetContent.setDisable(false);
+        btAppend.setDisable(false);
+        btInsert.setDisable(false);
+        btConcat.setDisable(false);
+        btRemove.setDisable(false);
+        btCount.setDisable(false);
+        btTausche.setDisable(false);
+        btUmdrehen.setDisable(false);
+
+        tfIsEmpty.setDisable(false);
+        tfHasAccess.setDisable(false);
+        tfGetContent.setDisable(false);
+        tfSetContent.setDisable(false);
+        tfAppend.setDisable(false);
+        tfInsert.setDisable(false);
+        tfCount.setDisable(false);
+
+        //Wird nur bei Integer-Listen Aufgerufen!
+        btDurchschnitt.setDisable(false);
+        tfDurchschnitt.setDisable(false);
     }
 
     public void btIsEmpty_click() {
@@ -75,7 +121,7 @@ public class List_Controller {
     }
 
     public void btGetContent_click() {
-        tfGetContent.setText(list.getContent());
+        tfGetContent.setText(list.getContent().toString());
     }
 
     public void btSetContent_click() {
@@ -140,5 +186,14 @@ public class List_Controller {
             list.next();
         }
         list.current = list2.current;
+    }
+
+    public void btDurchschnitt_click(){
+        int durchschnitt = list.average();
+        if (durchschnitt != 0) {
+            tfDurchschnitt.setText(String.valueOf(durchschnitt));
+        }
+        else tfDurchschnitt.setText("Eingabe Fehler");
+        gibAus();
     }
 }
