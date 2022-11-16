@@ -208,19 +208,4 @@ public abstract class List<ContentType> {
             return null;
         }
     }
-
-    /**
-     * Zählt die Elemente in der Liste
-     * @return anzahlElemente
-     */
-    public int count(){
-        int anzahlElemente = 1;
-        toFirst();
-        while (current != last){
-            next();
-            anzahlElemente +=1;
-        }
-        return anzahlElemente;
-    }
-
 }

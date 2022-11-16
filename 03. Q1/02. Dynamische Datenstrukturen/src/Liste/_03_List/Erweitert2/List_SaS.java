@@ -1,5 +1,6 @@
 package Liste._03_List.Erweitert2;
 //SaS = Search and Sort
+
 public class List_SaS <Integer> extends List_Integer <Integer>{
     public boolean lineareSuche(String pSearch){
         int search = java.lang.Integer.valueOf(pSearch);
@@ -13,5 +14,5 @@ public class List_SaS <Integer> extends List_Integer <Integer>{
         return false;
     }
 }
-//tausche überprüfen
-//Methode in Hauptklasse reinziehen -> Fragestellung: Wo fehlt Verweis?
+//Fragestellung: Wo fehlt Verweis (current)?
+//Methode in Hauptklasse kopieren -> current geht weiterhin verloren
