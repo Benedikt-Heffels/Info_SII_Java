@@ -6,19 +6,22 @@ public class List_Integer <Integer> extends List_Erweitert <Integer> {
         if (!isEmpty()) {
             current = first;
             int maximal = java.lang.Integer.valueOf(first.getContentObject().toString());
-            int pos = 0;
+            //int pos = 0;
+            ListNode temp = current;
             while (!current.equals(last)) {
                 next();
-                pos++;
+                //pos++;
                 int aktuell = java.lang.Integer.valueOf(current.getContentObject().toString());
                 if (aktuell > maximal) {
                     maximal = aktuell;
-                }
+                    temp = current;
+                } //komplette Liste wird durchlaufen -> pos geht verloren
             }
-            current = first;
-            for (int i = 0; i < pos; i++) {
-                next(); //Das größte Element soll current werden (nette Erweiterung)
-            }
+            current = temp;
+//            current = first;
+//            for (int i = 0; i < pos; i++) {
+//                next(); //Das größte Element soll current werden (nette Erweiterung)
+//            }
             return maximal;
         }
         else return null;
@@ -27,6 +30,7 @@ public class List_Integer <Integer> extends List_Erweitert <Integer> {
     public Double average() {
         int summeInt = 0;
         int anzahlInt = 0;
+        ListNode temp = current;
         if (!isEmpty()){
             current = first;
             summeInt = summeInt + java.lang.Integer.valueOf(current.getContentObject().toString());
@@ -36,6 +40,7 @@ public class List_Integer <Integer> extends List_Erweitert <Integer> {
                 summeInt = summeInt += java.lang.Integer.valueOf(current.getContentObject().toString());
                 anzahlInt ++;
             }
+            current = temp;
             return (Double.valueOf(summeInt/anzahlInt));
         }
         else return null;

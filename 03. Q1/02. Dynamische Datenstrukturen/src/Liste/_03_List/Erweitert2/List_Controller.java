@@ -38,6 +38,9 @@ public class List_Controller {
     @FXML private Button btLineareSuche;
     @FXML private TextField tfLineareSuche;
 
+    @FXML private Button btBinaereSuche;
+    @FXML private TextField tfBinaereSuche;
+
 
     private List_SaS list; //Fragestellung: Wie kriege ich in diese Variable sowohl List_Integer als auch List_Erweitert
 
@@ -153,12 +156,14 @@ public class List_Controller {
         if (list.toMax() != null){
             tfToMax.setText(list.toMax().toString());
         }
+        gibAus();
     }
 
     public void btAverage_click(){
         if (list.average() != null){
             tfAverage.setText(list.average().toString());
         }
+        gibAus();
     }
 
     public void btLineareSuche_click(){
@@ -167,6 +172,17 @@ public class List_Controller {
             tfLineareSuche.setText("Gefunden");
         }
         else tfLineareSuche.setText("Nicht gefunden");
+        gibAus();
+    }
+
+    public void btBinaereSuche_click(){
+        if (list.binaereSuche(tfBinaereSuche.getText())){
+            tfBinaereSuche.setText("Gefunden");
+        }
+        else{
+            tfBinaereSuche.setText("Nicht gefunden");
+        }
+        gibAus();
     }
 
     public void gibAus() {
