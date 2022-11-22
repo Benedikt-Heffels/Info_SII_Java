@@ -19,6 +19,15 @@ public class List_Erweitert <ContentType> extends List <ContentType> {
         }
     }
 
+    public void tauscheLinks(){
+        if (hasAccess()){
+            if (current != getPrevious(current) && current != last){
+                next();
+
+            }
+        }
+    }
+
     /**
      * Die Liste wird komplett umgedreht (letztes Element -> erstes Element, erstes Element -> letztes Element)
      */

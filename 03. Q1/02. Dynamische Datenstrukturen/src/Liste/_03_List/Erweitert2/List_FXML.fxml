@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="798.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Liste._03_List.Erweitert2.List_Controller">
+<AnchorPane prefHeight="830.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Liste._03_List.Erweitert2.List_Controller">
     <children>
         <Button fx:id="btList" layoutX="35.0" layoutY="29.0" mnemonicParsing="false" onAction="#btList_click" prefHeight="30.0" prefWidth="80.0" text="List" />
         <Button fx:id="btIsEmpty" disable="true" layoutX="35.0" layoutY="70.0" mnemonicParsing="false" onAction="#btIsEmpty_click" prefHeight="30.0" prefWidth="80.0" text="isEmpty" />
@@ -36,5 +36,9 @@
       <TextField fx:id="tfAverage" disable="true" layoutX="132.0" layoutY="673.0" prefHeight="25.0" prefWidth="91.0" />
       <Button fx:id="btLineareSuche" disable="true" layoutX="35.0" layoutY="704.0" mnemonicParsing="false" onAction="#btLineareSuche_click" prefHeight="25.0" prefWidth="80.0" text="LinSuche" />
       <TextField fx:id="tfLineareSuche" disable="true" layoutX="132.0" layoutY="704.0" prefHeight="25.0" prefWidth="91.0" />
+      <Button fx:id="btBinaereSuche" disable="true" layoutX="35.0" layoutY="737.0" mnemonicParsing="false" onAction="#btBinaereSuche_click" prefHeight="25.0" prefWidth="80.0" text="BinSuche" />
+      <Button fx:id="btBubbleSort" disable="true" layoutX="35.0" layoutY="770.0" mnemonicParsing="false" onAction="#btBubbleSort_click" prefHeight="25.0" prefWidth="80.0" text="Bubble Sort" />
+      <TextField fx:id="tfBinaereSuche" disable="true" layoutX="132.0" layoutY="737.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="tfBubbleSort" disable="true" layoutX="132.0" layoutY="770.0" prefHeight="25.0" prefWidth="91.0" />
     </children>
 </AnchorPane>

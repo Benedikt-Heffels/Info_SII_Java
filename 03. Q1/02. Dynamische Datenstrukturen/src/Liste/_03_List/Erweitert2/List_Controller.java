@@ -41,6 +41,9 @@ public class List_Controller {
     @FXML private Button btBinaereSuche;
     @FXML private TextField tfBinaereSuche;
 
+    @FXML private Button btBubbleSort;
+    @FXML private  TextField tfBubbleSort;
+
 
     private List_SaS list; //Fragestellung: Wie kriege ich in diese Variable sowohl List_Integer als auch List_Erweitert
 
@@ -73,9 +76,15 @@ public class List_Controller {
         tfInsert.setDisable(false);
         tfAverage.setDisable(false);
         tfToMax.setDisable(false);
+        tfCount.setDisable(false);
 
         btLineareSuche.setDisable(false);
         tfLineareSuche.setDisable(false);
+
+        btBinaereSuche.setDisable(false);
+        tfBinaereSuche.setDisable(false);
+        btBubbleSort.setDisable(false);
+        tfBubbleSort.setDisable(false);
     }
 
     public void btIsEmpty_click() {
@@ -121,8 +130,8 @@ public class List_Controller {
     }
 
     public void btConcat_click() {
-        List<String> l2 = new List<String>() {};
-        l2.append("1"); l2.append("2"); l2.append("3");
+        List<Integer> l2 = new List<Integer>() {};
+        l2.append(1);l2.append(2); l2.append(3); l2.append(10); l2.append(100); l2.append(500); l2.append(501);
         list.concat(l2);
         gibAus();
     }
@@ -183,6 +192,13 @@ public class List_Controller {
             tfBinaereSuche.setText("Nicht gefunden");
         }
         gibAus();
+    }
+
+    public void btBubbleSort_click(){
+        tfBubbleSort.setText("Sortiere...");
+        list.bubbleSort();
+        gibAus();
+        tfBubbleSort.setText("Sortiert!");
     }
 
     public void gibAus() {
