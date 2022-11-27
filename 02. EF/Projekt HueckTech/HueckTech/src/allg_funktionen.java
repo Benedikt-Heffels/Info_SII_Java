@@ -1,14 +1,13 @@
-package Bank;
-
-import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
+import java.io.File;
 
 
 public class allg_funktionen {
     public static Scanner scanner = new Scanner(System.in);
     //public static File folderusers = new File ("Z. HueckTech/users");
-    public static String folderHueckTech = "C:/Daten/1. Schule/10. EF/11. Informatik/JavaProjects/Info_SII_Java/Z. HueckTech";
+    public static String folderHueckTech = "C:/Daten/1. Schule/10. EF/11. Informatik/JavaProjects/Info_SII_Java/02. EF/ProjektHueckTech/HueckTech";
 
     public static void main(String[] args) {
         LogIn();
@@ -41,7 +40,7 @@ public class allg_funktionen {
                     }
                     if (e_pw_str.equals(true_pw)) {
                         System.out.println("LogIn succesfully!");
-                        strkontopath = "Z. HueckTech/kstd/" + e_bn + "-kstd.txt";
+                        strkontopath = "HueckTech/kstd/" + e_bn + "-kstd.txt";
                         go = true;
                     }
                     else {

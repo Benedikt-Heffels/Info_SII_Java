@@ -1,10 +1,15 @@
+package Bank;
+
+import huecktechunivers.bank.Bank;
+import huecktechunivers.Lotto.Lotto;
+
 import java.io.File;
 import java.util.Scanner;
 
 public class hauptmenue {
     public static void main(String[] args) {
         boolean go = true;
-        File kontopath = new File("Z. HueckTech/users/NE-NichtEingeloggt.txt");
+        File kontopath = new File("02. EF/Projekt HueckTech/HueckTech/users/NE-NichtEingeloggt.txt");
         String strkontopath = "Nicht Eingeloogt!";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Herzlich Willkommen bei den Programmen der HueckTech!");

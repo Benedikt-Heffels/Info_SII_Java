@@ -1,13 +1,10 @@
-package huecktechunivers.Lotto;
-
-import huecktechunivers.allg_funktionen;
 
 import java.io.File;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Lotto {
-    public static File kontopath = new File("Z. HueckTech/users/NE-NichtEingeloggt.txt");
+    public static File kontopath = new File("02. EF/Projekt HueckTech/HueckTech/users/NE-NichtEingeloggt.txt");
 
     public static void main(String[] args) {
         String strkontopath = "Nicht Eingeloogt";
@@ -86,7 +83,7 @@ public class Lotto {
                 }
                 zahlenListeHinzufuegen = false;
                 do {
-                    System.out.println("Bitte geben Sie noch Ihre Supperzahl ein (0-9)!");
+                    System.out.println("Bitte geben Sie noch Ihre Superzahl ein (0-9)!");
                     int esuperzahl = scanner.nextInt();
                     if (esuperzahl <= 9 && esuperzahl >= 0) {
                         tipps[6] = esuperzahl;

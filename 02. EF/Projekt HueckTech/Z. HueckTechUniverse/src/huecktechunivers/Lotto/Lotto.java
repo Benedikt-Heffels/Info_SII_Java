@@ -1,10 +1,13 @@
+package huecktechunivers.Lotto;
+
+import huecktechunivers.allg_funktionen;
 
 import java.io.File;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Lotto {
-    public static File kontopath = new File("Z. HueckTech/users/NE-NichtEingeloggt.txt");
+    public static File kontopath = new File("02. EF/Projekt HueckTech/HueckTech/users/NE-NichtEingeloggt.txt");
 
     public static void main(String[] args) {
         String strkontopath = "Nicht Eingeloogt";

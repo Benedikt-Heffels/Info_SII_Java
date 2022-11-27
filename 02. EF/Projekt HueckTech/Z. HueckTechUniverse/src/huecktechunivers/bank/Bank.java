@@ -6,7 +6,7 @@ import java.io.File;
 import java.util.Scanner;
 
 public class Bank {
-    public static File kontopath = new File("Z. HueckTech/users/NE-NichtEingeloggt.txt");
+    public static File kontopath = new File("02. EF/Projekt HueckTech/HueckTech/users/NE-NichtEingeloggt.txt");
 
 
     public static void main(String[] args) {

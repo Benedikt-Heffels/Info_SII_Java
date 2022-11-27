@@ -1,13 +1,14 @@
-import java.nio.charset.StandardCharsets;
-import java.util.*;
+package huecktechunivers;
+
 import java.io.*;
-import java.io.File;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 
 
 public class allg_funktionen {
     public static Scanner scanner = new Scanner(System.in);
     //public static File folderusers = new File ("Z. HueckTech/users");
-    public static String folderHueckTech = "C:/Daten/1. Schule/10. EF/11. Informatik/JavaProjects/Info_SII_Java/Z. HueckTech";
+    public static String folderHueckTech = "C:/Daten/1. Schule/10. EF/11. Informatik/JavaProjects/Info_SII_Java/02. EF/Projekt HueckTech/HueckTech";
 
     public static void main(String[] args) {
         LogIn();

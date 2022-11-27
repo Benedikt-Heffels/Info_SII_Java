@@ -1,0 +1,8 @@
+Projekt HueckTech und HueckTechUniverse (mit Jac):
+Erschaffung eines Applikationenuniversums aus verschiedenen Programmen des Unterrichts
+Teil des Universums:
+- Bank
+- Lotto
+- Autoshopping
+
+
