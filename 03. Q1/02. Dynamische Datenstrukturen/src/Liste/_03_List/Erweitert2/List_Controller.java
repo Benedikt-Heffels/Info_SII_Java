@@ -115,17 +115,17 @@ public class List_Controller {
     }
 
     public void btSetContent_click() {
-        list.setContent(tfSetContent.getText());
+        list.setContent(Integer.valueOf(tfSetContent.getText()));
         gibAus();
     }
 
     public void btAppend_click() {
-        list.append(tfAppend.getText());
+        list.append(Integer.valueOf(tfAppend.getText()));
         gibAus();
     }
 
     public void btInsert_click() {
-        list.insert(tfInsert.getText());
+        list.insert(Integer.valueOf(tfInsert.getText()));
         gibAus();
     }
 
@@ -185,7 +185,7 @@ public class List_Controller {
     }
 
     public void btBinaereSuche_click(){
-        if (list.binaereSuche(tfBinaereSuche.getText())){
+        if (list.binaereSuche(Integer.parseInt(tfBinaereSuche.getText()))){
             tfBinaereSuche.setText("Gefunden");
         }
         else{
@@ -203,7 +203,7 @@ public class List_Controller {
 
     public void gibAus() {
         //Hilfsliste list2 - nur für Zwischenspeicherung current!
-        List<String> list2 = new List<String>(){};
+        List list2 = new List <Integer>(){};
         list2.current = list.current;
         lv.getItems().clear();
         list.toFirst();
