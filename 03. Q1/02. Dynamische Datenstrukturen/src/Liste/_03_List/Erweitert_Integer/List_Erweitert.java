@@ -1,4 +1,4 @@
-package Liste._03_List.Erweitert2;
+package Liste._03_List.Erweitert_Integer;
 
 public class List_Erweitert <ContentType> extends List <ContentType> {
 

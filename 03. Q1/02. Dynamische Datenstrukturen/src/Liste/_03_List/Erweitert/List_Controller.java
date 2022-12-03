@@ -65,38 +65,6 @@ public class List_Controller {
         tfCount.setDisable(false);
     }
 
-    public void btIntegerList_click(){
-        list = new List<String>();
-        gibAus();
-
-        btIsEmpty.setDisable(false);
-        btHasAccess.setDisable(false);
-        btNext.setDisable(false);
-        btToFirst.setDisable(false);
-        btToLast.setDisable(false);
-        btGetContent.setDisable(false);
-        btSetContent.setDisable(false);
-        btAppend.setDisable(false);
-        btInsert.setDisable(false);
-        btConcat.setDisable(false);
-        btRemove.setDisable(false);
-        btCount.setDisable(false);
-        btTausche.setDisable(false);
-        btUmdrehen.setDisable(false);
-
-        tfIsEmpty.setDisable(false);
-        tfHasAccess.setDisable(false);
-        tfGetContent.setDisable(false);
-        tfSetContent.setDisable(false);
-        tfAppend.setDisable(false);
-        tfInsert.setDisable(false);
-        tfCount.setDisable(false);
-
-        //Wird nur bei Integer-Listen Aufgerufen!
-        btDurchschnitt.setDisable(false);
-        tfDurchschnitt.setDisable(false);
-    }
-
     public void btIsEmpty_click() {
         if (list.isEmpty()) tfIsEmpty.setText("ja - leer!"); else tfIsEmpty.setText("nicht leer!");
     }
@@ -186,14 +154,5 @@ public class List_Controller {
             list.next();
         }
         list.current = list2.current;
-    }
-
-    public void btDurchschnitt_click(){
-        int durchschnitt = list.average();
-        if (durchschnitt != 0) {
-            tfDurchschnitt.setText(String.valueOf(durchschnitt));
-        }
-        else tfDurchschnitt.setText("Eingabe Fehler");
-        gibAus();
     }
 }

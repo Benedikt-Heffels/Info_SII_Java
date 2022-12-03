@@ -1,4 +1,4 @@
-package Liste._03_List.Erweitert2;
+package Liste._03_List.Erweitert_Integer;
 //SaS = Search and Sort
 
 public class List_SaS extends List_Integer {

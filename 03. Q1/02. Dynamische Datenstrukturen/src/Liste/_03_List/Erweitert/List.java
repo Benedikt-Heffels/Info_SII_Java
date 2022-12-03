@@ -262,43 +262,4 @@ public class List<ContentType> {
             this.concat(list2);
         }
     }
-
-    protected boolean isNumeric (){ //Methode überprüft, ob eingegebene Liste eine Zahl ist
-        boolean isNumeric;
-        try {
-            if (hasAccess()) toFirst();
-            while (!current.equals(last)){
-                Double.parseDouble(current.getContentObject().toString());
-                next();
-            }
-            isNumeric = true;
-        } catch(NumberFormatException exception){
-            isNumeric = false;
-        }
-        return isNumeric;
-    }
-
-    public int average(){
-        if (isNumeric()){
-            toFirst();
-            int currentINT = Integer.valueOf(current.getContentObject().toString());
-            if (currentINT == 1) {
-
-            }
-            int zahlen = 0;
-            int anzahlZahlen = 0;
-            while (!current.equals(last)){
-                zahlen += Integer.valueOf(current.getContentObject().toString());
-                anzahlZahlen +=1;
-                next();
-            }
-            zahlen += Integer.valueOf(current.getContentObject().toString());
-            anzahlZahlen += 1;
-            int average = zahlen / anzahlZahlen; //Durchschnitt: Alle Zahlen addiert / Anzahl Zahlen
-            return average;
-        }
-        else {
-            return 0;
-        }
-    }
 }

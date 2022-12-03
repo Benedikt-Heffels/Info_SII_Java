@@ -1,4 +1,4 @@
-package Liste._03_List.Erweitert2;
+package Liste._03_List.Erweitert_Integer;
 
 /**
  * @author Benedikt Heffels auf Basis von Pedro Matias, Schulministerium NRW
