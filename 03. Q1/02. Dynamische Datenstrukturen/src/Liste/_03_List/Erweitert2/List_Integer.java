@@ -1,17 +1,17 @@
 package Liste._03_List.Erweitert2;
 
-public class List_Integer <Integer> extends List_Erweitert <Integer> {
+public class List_Integer extends List_Erweitert <Integer> {
 
-    public java.lang.Integer toMax(){
+    public Integer toMax(){
         if (!isEmpty()) {
             current = first;
-            int maximal = java.lang.Integer.valueOf(first.getContentObject().toString());
+            int maximal = Integer.valueOf(first.getContentObject().toString());
             //int pos = 0;
             ListNode temp = current;
             while (!current.equals(last)) {
                 next();
                 //pos++;
-                int aktuell = java.lang.Integer.valueOf(current.getContentObject().toString());
+                int aktuell = Integer.valueOf(current.getContentObject().toString());
                 if (aktuell > maximal) {
                     maximal = aktuell;
                     temp = current;
@@ -33,11 +33,11 @@ public class List_Integer <Integer> extends List_Erweitert <Integer> {
         ListNode temp = current;
         if (!isEmpty()){
             current = first;
-            summeInt = summeInt + java.lang.Integer.valueOf(current.getContentObject().toString());
+            summeInt = summeInt + Integer.valueOf(current.getContentObject().toString());
             anzahlInt ++;
             while (!current.equals(last)){
                 next();
-                summeInt = summeInt += java.lang.Integer.valueOf(current.getContentObject().toString());
+                summeInt = summeInt += Integer.valueOf(current.getContentObject().toString());
                 anzahlInt ++;
             }
             current = temp;

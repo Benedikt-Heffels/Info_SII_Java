@@ -24,11 +24,11 @@ public abstract class List<ContentType> {
         }
 
         public ListNode getNextNode() {
-            return this.next;
+            return next;
         }
 
         public void setNextNode(ListNode pNext) {
-            this.next = pNext;
+            next = pNext;
         }
     }
 

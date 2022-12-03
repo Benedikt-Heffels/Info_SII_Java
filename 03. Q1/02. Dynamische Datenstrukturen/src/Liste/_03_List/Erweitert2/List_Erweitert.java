@@ -7,26 +7,27 @@ public class List_Erweitert <ContentType> extends List <ContentType> {
      */
     public void tauscheRechts(){
         if (hasAccess()){
-            if (current != current.getNextNode() && current != last){
-                insert(current.getNextNode().getContentObject());
+            if (current != last){
+                //insert(current.getNextNode().getContentObject());
                 ListNode temp = current.getNextNode();
-                current.setNextNode(current.getNextNode().getNextNode());
-                toFirst();
-                while (current.getContentObject() != temp.getContentObject()){
-                    next();
+                current.setNextNode(temp.getNextNode());
+                temp.setNextNode(current);
+                if (current == first){
+                    first = temp;
+                }
+                else {
+                    current = getPrevious(current);
+                    current.setNextNode(temp);
+                    current = temp.getNextNode();
+                }
+                if (current == last){
+                    last = last.getNextNode();
                 }
             }
+
         }
     }
 
-    public void tauscheLinks(){
-        if (hasAccess()){
-            if (current != getPrevious(current) && current != last){
-                next();
-
-            }
-        }
-    }
 
     /**
      * Die Liste wird komplett umgedreht (letztes Element -> erstes Element, erstes Element -> letztes Element)
