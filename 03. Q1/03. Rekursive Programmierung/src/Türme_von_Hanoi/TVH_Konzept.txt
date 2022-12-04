@@ -1,0 +1,13 @@
+Methode Move (Zahl Scheiben n, Turm from, Turm to, Turm Via)
+    Wenn Scheiben == 1 //In diesem Fall gibt es insgesamt nur eine Scheibe
+        Sout Bewege von from zu to
+    Sonst
+        Move(n-1, from, Via, To)
+        Move (1, from, to, Via) //Wenn Ausführung beendet, läuft Methode hier weiter
+        Move (n-1, via, to, from)
+
+=> REKURSIV
+//Ruft sich dauerhaft selbst auf, bis bei Move 1 eingesetzt wird (vollständig bewegt)
+
+
+Inspiraation: https://web.ifis.cs.tu-bs.de/struckmann/vorkurs17w/V5.pdf
