@@ -14,7 +14,7 @@ public class TVH_Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TVH_FXL.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TVH_FXML.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setScene(scene);
         primaryStage.show();
