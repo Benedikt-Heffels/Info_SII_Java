@@ -18,6 +18,6 @@ public class TVH_Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setScene(scene);
         primaryStage.show();
-        primaryStage.setTitle("UPN_Stack & Co.");
+        primaryStage.setTitle("Türme von Hanoi");
     }
 }

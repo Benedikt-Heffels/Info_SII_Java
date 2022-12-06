@@ -2,16 +2,24 @@ package Türme_von_Hanoi;
 
 public class Türme_von_Hanoi {
 
-	public Türme_von_Hanoi(int anzahlScheiben) {
+	public Türme_von_Hanoi() {
 		TurmA = new TVH_Stack <String>();
 		TurmB = new TVH_Stack <String>();
 		TurmC = new TVH_Stack <String>();
-		scheibenHinzufügen(anzahlScheiben);
+		anzahlScheiben = 0;
+		running = false;
 	}
 
-	private TVH_Stack <String> TurmA;
-	private TVH_Stack <String> TurmB;
-	private TVH_Stack <String> TurmC;
+	public TVH_Stack <String> TurmA;
+	public TVH_Stack <String> TurmB;
+	public TVH_Stack <String> TurmC;
+	private boolean running;
+	private int anzahlScheiben;
+
+	public void setAnzahlScheiben(int anzahlScheiben) {
+		this.anzahlScheiben = anzahlScheiben;
+		scheibenHinzufügen(this.anzahlScheiben);
+	}
 
 	protected void scheibenHinzufügen(int anzahlScheiben) {
         for (int i = anzahlScheiben; i >= 0 ; i--) {
@@ -19,7 +27,13 @@ public class Türme_von_Hanoi {
         }
 	}
 
-	public void move(int pAnzahlScheiben, String von, String nach, String über) {
+	public boolean isRunning() {
+		return running;
+	}
+
+
+	public void move(int pAnzahlScheiben, String von, String nach, String über, boolean sourceNext) { //sourceNext == true: Aufruf aus "NEXT", sonst Aufruf aus "AUTOMATIC"
+		running = true;
 		if (pAnzahlScheiben == 1){
 			System.out.println("Bewege eine Scheibe von Turm " + von + " zum Turm " + nach + ".");
 			//Überschreiben der Stacks -> Bessere Ausgabe
@@ -53,11 +67,24 @@ public class Türme_von_Hanoi {
 				TurmC.pop();
 				TurmA.push(element);
 			}
+
+			TVH_Controller.gibAus(sourceNext);
+			if (!sourceNext){
+				try {
+					Thread.sleep(10000);
+				} catch (Exception e){
+					System.out.println("Technische Probleme");
+				}
+			}
 		}
 		else {
-			move(pAnzahlScheiben - 1, von, über, nach);
-			move(1, von, nach, über);
-			move(pAnzahlScheiben-1, über, nach, von);
+			running = true;
+			move(pAnzahlScheiben - 1, von, über, nach, sourceNext);
+			running = true;
+			move(1, von, nach, über, sourceNext);
+			running = true;
+			move(pAnzahlScheiben-1, über, nach, von, sourceNext);
+			running = false;
 		}
 	}
 
