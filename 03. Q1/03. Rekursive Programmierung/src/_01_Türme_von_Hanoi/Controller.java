@@ -1,4 +1,4 @@
-package Türme_von_Hanoi;
+package _01_Türme_von_Hanoi;
 //Fehlerquelle: static <- BESEITIGT!
 //Absturz ab zweitem Next-Klick
 //Nicht alle ELemente werden in "Automatic" in die LV übernommen!
@@ -187,7 +187,6 @@ public class Controller {
             }
         }
         else {
-            running = true;
             move(pAnzahlScheiben - 1, von, über, nach, sourceNext);
             running = true;
             move(1, von, nach, über, sourceNext);

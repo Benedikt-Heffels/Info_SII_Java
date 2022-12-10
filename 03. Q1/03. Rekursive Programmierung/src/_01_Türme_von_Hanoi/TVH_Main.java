@@ -1,4 +1,4 @@
-package Türme_von_Hanoi;
+package _01_Türme_von_Hanoi;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

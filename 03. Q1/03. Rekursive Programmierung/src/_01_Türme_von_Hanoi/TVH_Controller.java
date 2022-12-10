@@ -1,4 +1,4 @@
-package Türme_von_Hanoi;
+package _01_Türme_von_Hanoi;
 //Fehlerquelle: static
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
