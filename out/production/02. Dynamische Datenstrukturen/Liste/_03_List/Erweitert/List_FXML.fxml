@@ -30,8 +30,5 @@
       <TextField fx:id="tfCount" disable="true" layoutX="132.0" layoutY="527.0" prefHeight="25.0" prefWidth="91.0" />
       <Button fx:id="btTausche" disable="true" layoutX="35.0" layoutY="564.0" mnemonicParsing="false" onAction="#btTausche_click" prefHeight="25.0" prefWidth="80.0" text="tauschen" />
       <Button fx:id="btUmdrehen" disable="true" layoutX="35.0" layoutY="603.0" mnemonicParsing="false" onAction="#btUmdrehen_click" prefHeight="25.0" prefWidth="80.0" text="umdrehen" />
-      <Button fx:id="btIntegerList" layoutX="132.0" layoutY="32.0" mnemonicParsing="false" onAction="#btIntegerList_click" prefHeight="25.0" prefWidth="91.0" text="Integer-List" />
-      <Button fx:id="btDurchschnitt" disable="true" layoutX="35.0" layoutY="641.0" mnemonicParsing="false" onAction="#btDurchschnitt_click" prefHeight="25.0" prefWidth="80.0" text="Schnitt" />
-      <TextField fx:id="tfDurchschnitt" disable="true" layoutX="132.0" layoutY="641.0" prefHeight="25.0" prefWidth="91.0" />
     </children>
 </AnchorPane>
