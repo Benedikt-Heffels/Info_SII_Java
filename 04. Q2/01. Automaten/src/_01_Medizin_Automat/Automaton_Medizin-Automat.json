@@ -1,0 +1,352 @@
+﻿{
+  "name": "Medizin-Automat",
+  "description": "Soll vorbestellte Medikamente (Fächer) ausgeben, Rezepte annehmen und Selbstwahl-Medikamente ermöglichen.",
+  "type": "MEALY",
+  "automaton": {
+    "acceptCache": [],
+    "simulationInput": [
+      "btFach"
+    ],
+    "Alphabet": [
+      "btFach",
+      "btRezept",
+      "Code",
+      "FreiRezept",
+      "btWahl",
+      "ZahlRezept",
+      "Wahl",
+      "KarteZahlung"
+    ],
+    "StackAlphabet": [
+      "Medikament",
+      "nichts"
+    ],
+    "States": [
+      {
+        "ID": 1,
+        "Name": "q0",
+        "x": 150,
+        "y": 480,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 1,
+            "Target": 2,
+            "x": 50,
+            "y": 0,
+            "Labels": [
+              [
+                "btFach",
+                "nichts"
+              ]
+            ]
+          },
+          {
+            "Source": 1,
+            "Target": 3,
+            "x": 50,
+            "y": 0,
+            "Labels": [
+              [
+                "btRezept",
+                "nichts"
+              ]
+            ]
+          },
+          {
+            "Source": 1,
+            "Target": 4,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              [
+                "btWahl",
+                "nichts"
+              ]
+            ]
+          },
+          {
+            "Source": 1,
+            "Target": 1,
+            "x": -30,
+            "y": 160,
+            "Labels": [
+              [
+                "Code",
+                "nichts"
+              ],
+              [
+                "FreiRezept",
+                "nichts"
+              ],
+              [
+                "ZahlRezept",
+                "nichts"
+              ],
+              [
+                "Wahl",
+                "nichts"
+              ],
+              [
+                "KarteZahlung",
+                "nichts"
+              ]
+            ]
+          }
+        ],
+        "Start": true
+      },
+      {
+        "ID": 3,
+        "Name": "q2",
+        "x": 760,
+        "y": 300,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 3,
+            "Target": 1,
+            "x": 130,
+            "y": -110,
+            "Labels": [
+              [
+                "FreiRezept",
+                "Medikament"
+              ]
+            ]
+          },
+          {
+            "Source": 3,
+            "Target": 3,
+            "x": 0,
+            "y": -40,
+            "Labels": [
+              [
+                "btFach",
+                "nichts"
+              ],
+              [
+                "btRezept",
+                "nichts"
+              ],
+              [
+                "Code",
+                "nichts"
+              ],
+              [
+                "btWahl",
+                "nichts"
+              ],
+              [
+                "Wahl",
+                "nichts"
+              ],
+              [
+                "KarteZahlung",
+                "nichts"
+              ]
+            ]
+          },
+          {
+            "Source": 3,
+            "Target": 6,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              [
+                "ZahlRezept",
+                "nichts"
+              ]
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 4,
+        "Name": "q3",
+        "x": 500,
+        "y": 750,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 4,
+            "Target": 4,
+            "x": -60,
+            "y": 60,
+            "Labels": [
+              [
+                "btFach",
+                "nichts"
+              ],
+              [
+                "btRezept",
+                "nichts"
+              ],
+              [
+                "Code",
+                "nichts"
+              ],
+              [
+                "FreiRezept",
+                "nichts"
+              ],
+              [
+                "btWahl",
+                "nichts"
+              ],
+              [
+                "ZahlRezept",
+                "nichts"
+              ],
+              [
+                "KarteZahlung",
+                "nichts"
+              ]
+            ]
+          },
+          {
+            "Source": 4,
+            "Target": 6,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              [
+                "Wahl",
+                "nichts"
+              ]
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 2,
+        "Name": "q1",
+        "x": 300,
+        "y": 120,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 2,
+            "Target": 1,
+            "x": 50,
+            "y": 0,
+            "Labels": [
+              [
+                "Code",
+                "Medikament"
+              ]
+            ]
+          },
+          {
+            "Source": 2,
+            "Target": 2,
+            "x": -40,
+            "y": 0,
+            "Labels": [
+              [
+                "btFach",
+                "nichts"
+              ],
+              [
+                "btRezept",
+                "nichts"
+              ],
+              [
+                "FreiRezept",
+                "nichts"
+              ],
+              [
+                "btWahl",
+                "nichts"
+              ],
+              [
+                "ZahlRezept",
+                "nichts"
+              ],
+              [
+                "Wahl",
+                "nichts"
+              ],
+              [
+                "KarteZahlung",
+                "nichts"
+              ]
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 6,
+        "Name": "q5",
+        "x": 1490,
+        "y": 440,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 6,
+            "Target": 1,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              [
+                "KarteZahlung",
+                "Medikament"
+              ]
+            ]
+          },
+          {
+            "Source": 6,
+            "Target": 6,
+            "x": 0,
+            "y": -150,
+            "Labels": [
+              [
+                "btFach",
+                "nichts"
+              ],
+              [
+                "btRezept",
+                "nichts"
+              ],
+              [
+                "Code",
+                "nichts"
+              ],
+              [
+                "FreiRezept",
+                "nichts"
+              ],
+              [
+                "btWahl",
+                "nichts"
+              ],
+              [
+                "ZahlRezept",
+                "nichts"
+              ],
+              [
+                "Wahl",
+                "nichts"
+              ]
+            ]
+          }
+        ],
+        "Start": false
+      }
+    ],
+    "lastInputs": [
+      [
+        "btFach"
+      ]
+    ]
+  },
+  "GUID": "hii6ffteh"
+}

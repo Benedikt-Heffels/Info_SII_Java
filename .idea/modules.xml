@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/03. Q1/00. Wiederholung/00. Wiederholung.iml" filepath="$PROJECT_DIR$/03. Q1/00. Wiederholung/00. Wiederholung.iml" />
       <module fileurl="file://$PROJECT_DIR$/03. Q1/00. Wiederholung EF.iml" filepath="$PROJECT_DIR$/03. Q1/00. Wiederholung EF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04. Q2/01. Automaten/01. Automaten.iml" filepath="$PROJECT_DIR$/04. Q2/01. Automaten/01. Automaten.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/01. HelloWorld/01. HelloWorld.iml" filepath="$PROJECT_DIR$/02. EF/01. HelloWorld/01. HelloWorld.iml" />
       <module fileurl="file://$PROJECT_DIR$/03. Q1/01. JavaFX/01. JavaFX.iml" filepath="$PROJECT_DIR$/03. Q1/01. JavaFX/01. JavaFX.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/01.1 Einfacher Rechner/01.1 Einfacher Rechner.iml" filepath="$PROJECT_DIR$/02. EF/01.1 Einfacher Rechner/01.1 Einfacher Rechner.iml" />
@@ -13,6 +14,8 @@
       <module fileurl="file://$PROJECT_DIR$/03. Q1/03. Q1.iml" filepath="$PROJECT_DIR$/03. Q1/03. Q1.iml" />
       <module fileurl="file://$PROJECT_DIR$/03. Q1/03. Rekursive Programmierung/03. Rekursive Programmierung.iml" filepath="$PROJECT_DIR$/03. Q1/03. Rekursive Programmierung/03. Rekursive Programmierung.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/03. Scanner/03. Scanner.iml" filepath="$PROJECT_DIR$/02. EF/03. Scanner/03. Scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03. Q1/04. Baueme.iml" filepath="$PROJECT_DIR$/03. Q1/04. Baueme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04. Q2/04. Q2.iml" filepath="$PROJECT_DIR$/04. Q2/04. Q2.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/04. Verzweigungen und Schleifen/04. Verzweigungen und Schleifen.iml" filepath="$PROJECT_DIR$/02. EF/04. Verzweigungen und Schleifen/04. Verzweigungen und Schleifen.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/05. Arrays/05. Arrays.iml" filepath="$PROJECT_DIR$/02. EF/05. Arrays/05. Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/02. EF/06. Methoden/06. Methoden.iml" filepath="$PROJECT_DIR$/02. EF/06. Methoden/06. Methoden.iml" />
