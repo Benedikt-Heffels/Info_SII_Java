@@ -1,4 +1,4 @@
-package _01_Medizin_Automat;
+package _01_MEALY.Medizin_Automat;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -25,6 +25,7 @@ public class Controller_Medizinautomat {
     Medizinautomat.tAusgabe ausgabe;
 
     int medNumber = 1; //Hilfe zur Unterscheidung der Eingaben btWahl und btWeitereWahl
+    String medikament = "";
 
 
     public void btFach_onClick(){
@@ -85,6 +86,7 @@ public class Controller_Medizinautomat {
         }
         else if (btWahl.getText().equals("(Weitere) Wahl übermitteln") && medNumber == 1) {
             String med = tfWahl.getText();
+            medikament = medikament + med + ", ";
             eingabe = Medizinautomat.tEingabe.wahl;
             zustand = medizinautomat.Übergangsfunktion(zustand, eingabe);
             ausgabe = medizinautomat.Ausgabefunktion(eingabe);
@@ -108,7 +110,16 @@ public class Controller_Medizinautomat {
         eingabe = Medizinautomat.tEingabe.karteZahlung;
         zustand = medizinautomat.Übergangsfunktion(zustand, eingabe);
         ausgabe = medizinautomat.Ausgabefunktion(eingabe);
-        print(eingabe, zustand, ausgabe, true, "Zahlung erfolgreich, Ihr Medikament wird ausgegeben. Bis bald!");
+        if (!medikament.equals("")){
+            print(eingabe, zustand, ausgabe, true, "Zahlung erfolgreich, Ihr(e) Medikament(e) '" +
+                    medikament.substring(0, medikament.length()-1) + "' wird (werden) ausgegeben. Bis bald!");
+            medikament = "";
+
+        }
+        else  {
+            print(eingabe, zustand, ausgabe, true, "Zahlung erfolgreich, ihr Medikament wird " +
+                    "ausgegeben. Bis bald!");
+        }
         btWahl.setText("Wahl"); //Wiederherstellung Ursprungszustand
         tfWahl.setText("Name des Medikamentes");
         tfWahl.setVisible(false);

@@ -1,4 +1,4 @@
-package _01_Medizin_Automat;
+package _01_MEALY.Medizin_Automat;
 
 public class Medizinautomat {
     // enum in if mit .equals

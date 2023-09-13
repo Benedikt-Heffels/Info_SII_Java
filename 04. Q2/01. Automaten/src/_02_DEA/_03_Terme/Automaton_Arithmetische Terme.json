@@ -1,0 +1,175 @@
+﻿{
+  "name": "Arithmetische Terme",
+  "description": "Der Automat soll einen arithmetischen Term erkennen",
+  "type": "DEA",
+  "automaton": {
+    "acceptCache": [],
+    "simulationInput": [],
+    "Alphabet": [
+      "zahl",
+      "plus",
+      "minus",
+      "mal",
+      "geteilt"
+    ],
+    "StackAlphabet": [
+      "|"
+    ],
+    "States": [
+      {
+        "ID": 1,
+        "Name": "z0",
+        "x": 120,
+        "y": 130,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 1,
+            "Target": 2,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "zahl"
+            ]
+          },
+          {
+            "Source": 1,
+            "Target": 3,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "geteilt",
+              "mal",
+              "minus",
+              "plus"
+            ]
+          }
+        ],
+        "Start": true
+      },
+      {
+        "ID": 2,
+        "Name": "z1",
+        "x": 520,
+        "y": 110,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 2,
+            "Target": 3,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "zahl"
+            ]
+          },
+          {
+            "Source": 2,
+            "Target": 4,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "geteilt",
+              "mal",
+              "minus",
+              "plus"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 3,
+        "Name": "trap",
+        "x": 260,
+        "y": 330,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 3,
+            "Target": 3,
+            "x": -20,
+            "y": 160,
+            "Labels": [
+              "geteilt",
+              "mal",
+              "minus",
+              "plus",
+              "zahl"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 4,
+        "Name": "z2",
+        "x": 1010,
+        "y": 120,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 4,
+            "Target": 5,
+            "x": 50,
+            "y": 0,
+            "Labels": [
+              "zahl"
+            ]
+          },
+          {
+            "Source": 4,
+            "Target": 3,
+            "x": 80,
+            "y": -70,
+            "Labels": [
+              "geteilt",
+              "mal",
+              "minus",
+              "plus"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 5,
+        "Name": "z3",
+        "x": 1240,
+        "y": 300,
+        "Final": true,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 5,
+            "Target": 3,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "zahl"
+            ]
+          },
+          {
+            "Source": 5,
+            "Target": 4,
+            "x": 50,
+            "y": 0,
+            "Labels": [
+              "geteilt",
+              "mal",
+              "minus",
+              "plus"
+            ]
+          }
+        ],
+        "Start": false
+      }
+    ],
+    "lastInputs": []
+  },
+  "GUID": "jigs938uz"
+}

@@ -15,7 +15,8 @@
       "btWahl",
       "ZahlRezept",
       "Wahl",
-      "KarteZahlung"
+      "KarteZahlung",
+      "btWeitereWahl"
     ],
     "StackAlphabet": [
       "Medikament",
@@ -91,6 +92,10 @@
               [
                 "KarteZahlung",
                 "nichts"
+              ],
+              [
+                "btWeitereWahl",
+                "nichts"
               ]
             ]
           }
@@ -145,6 +150,10 @@
               ],
               [
                 "KarteZahlung",
+                "nichts"
+              ],
+              [
+                "btWeitereWahl",
                 "nichts"
               ]
             ]
@@ -205,13 +214,17 @@
               [
                 "KarteZahlung",
                 "nichts"
+              ],
+              [
+                "btWeitereWahl",
+                "nichts"
               ]
             ]
           },
           {
             "Source": 4,
             "Target": 6,
-            "x": 0,
+            "x": 50,
             "y": 0,
             "Labels": [
               [
@@ -276,6 +289,10 @@
               [
                 "KarteZahlung",
                 "nichts"
+              ],
+              [
+                "btWeitereWahl",
+                "nichts"
               ]
             ]
           }
@@ -334,6 +351,18 @@
               ],
               [
                 "Wahl",
+                "nichts"
+              ]
+            ]
+          },
+          {
+            "Source": 6,
+            "Target": 4,
+            "x": 50,
+            "y": 0,
+            "Labels": [
+              [
+                "btWeitereWahl",
                 "nichts"
               ]
             ]
