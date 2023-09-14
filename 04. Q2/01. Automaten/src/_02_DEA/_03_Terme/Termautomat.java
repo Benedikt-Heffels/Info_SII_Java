@@ -4,7 +4,7 @@ public class Termautomat {
 
     public enum tEingabe {zahl, plus , minus, mal, geteilt, error}
     public enum tZustand {z0, z1, z2, z3, trap}
-    public enum tAusgabe {nichts, error}
+    public enum tAusgabe {nichts, error, gültig}
 
     private tZustand zustand = tZustand.z0;
     public Termautomat(){}
@@ -43,6 +43,9 @@ public class Termautomat {
         tAusgabe ausgabe = tAusgabe.nichts;
         if (pZustand == tZustand.trap) {
             ausgabe = tAusgabe.error;
+        }
+        else if (pZustand == tZustand.z3){
+            ausgabe = tAusgabe.gültig;
         }
         return ausgabe;
     }
