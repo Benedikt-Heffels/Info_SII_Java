@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="119.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_02_DEA._03_Terme.Controller_Termautomat">
+   <children>
+      <TextField fx:id="tfTerm" alignment="CENTER" layoutX="36.0" layoutY="44.0" prefHeight="25.0" prefWidth="403.0" text="Termeingabe hier" />
+      <Button fx:id="btEingabe" layoutX="36.0" layoutY="69.0" mnemonicParsing="false" onAction="#btEingabe_onClick" prefHeight="25.0" prefWidth="403.0" text="Auf Arithmetik prüfen" />
+   </children>
+</AnchorPane>
