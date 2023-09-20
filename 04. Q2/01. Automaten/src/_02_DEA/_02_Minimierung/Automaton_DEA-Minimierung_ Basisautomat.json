@@ -1,0 +1,252 @@
+﻿{
+  "name": "DEA-Minimierung: Basisautomat",
+  "description": "",
+  "type": "DEA",
+  "automaton": {
+    "acceptCache": [],
+    "simulationInput": [],
+    "Alphabet": [
+      "0",
+      "1"
+    ],
+    "StackAlphabet": [
+      "|"
+    ],
+    "States": [
+      {
+        "ID": 1,
+        "Name": "A",
+        "x": 150,
+        "y": 150,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 1,
+            "Target": 2,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "0"
+            ]
+          },
+          {
+            "Source": 1,
+            "Target": 6,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "1"
+            ]
+          }
+        ],
+        "Start": true
+      },
+      {
+        "ID": 2,
+        "Name": "B",
+        "x": 300,
+        "y": 150,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 2,
+            "Target": 3,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "1"
+            ]
+          },
+          {
+            "Source": 2,
+            "Target": 7,
+            "x": 20,
+            "y": 20,
+            "Labels": [
+              "0"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 3,
+        "Name": "C",
+        "x": 470,
+        "y": 150,
+        "Final": true,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 3,
+            "Target": 3,
+            "x": 0,
+            "y": -150,
+            "Labels": [
+              "1"
+            ]
+          },
+          {
+            "Source": 3,
+            "Target": 1,
+            "x": 0,
+            "y": -100,
+            "Labels": [
+              "0"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 4,
+        "Name": "D",
+        "x": 650,
+        "y": 160,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 4,
+            "Target": 3,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "0"
+            ]
+          },
+          {
+            "Source": 4,
+            "Target": 7,
+            "x": 0,
+            "y": 30,
+            "Labels": [
+              "1"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 5,
+        "Name": "E",
+        "x": 150,
+        "y": 310,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 5,
+            "Target": 8,
+            "x": 0,
+            "y": -200,
+            "Labels": [
+              "0"
+            ]
+          },
+          {
+            "Source": 5,
+            "Target": 6,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "1"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 6,
+        "Name": "F",
+        "x": 300,
+        "y": 320,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 6,
+            "Target": 7,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "1"
+            ]
+          },
+          {
+            "Source": 6,
+            "Target": 3,
+            "x": 20,
+            "y": 30,
+            "Labels": [
+              "0"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 7,
+        "Name": "G",
+        "x": 480,
+        "y": 320,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 7,
+            "Target": 7,
+            "x": -20,
+            "y": 80,
+            "Labels": [
+              "0"
+            ]
+          },
+          {
+            "Source": 7,
+            "Target": 5,
+            "x": 0,
+            "y": 70,
+            "Labels": [
+              "1"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 8,
+        "Name": "H",
+        "x": 650,
+        "y": 320,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 8,
+            "Target": 3,
+            "x": -20,
+            "y": -20,
+            "Labels": [
+              "1"
+            ]
+          },
+          {
+            "Source": 8,
+            "Target": 7,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "0"
+            ]
+          }
+        ],
+        "Start": false
+      }
+    ],
+    "lastInputs": []
+  },
+  "GUID": "hiprxct7r"
+}
