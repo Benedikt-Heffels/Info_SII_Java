@@ -1,4 +1,4 @@
-package _02_DEA._03_Terme;
+package _02_DEA._01_Programme._03_Terme;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

@@ -1,4 +1,4 @@
-package _02_DEA._02_SOS;
+package _02_DEA._01_Programme._02_SOS;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
