@@ -1,0 +1,165 @@
+﻿{
+  "name": "DEA-Minimierung: Minimierter Automat",
+  "description": "",
+  "type": "DEA",
+  "automaton": {
+    "acceptCache": [],
+    "simulationInput": [],
+    "Alphabet": [
+      "0",
+      "1"
+    ],
+    "StackAlphabet": [
+      "|"
+    ],
+    "States": [
+      {
+        "ID": 1,
+        "Name": "A,E",
+        "x": 150,
+        "y": 150,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 1,
+            "Target": 2,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "0"
+            ]
+          },
+          {
+            "Source": 1,
+            "Target": 4,
+            "x": 0,
+            "y": 170,
+            "Labels": [
+              "1"
+            ]
+          }
+        ],
+        "Start": true
+      },
+      {
+        "ID": 2,
+        "Name": "B,H",
+        "x": 300,
+        "y": 150,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 2,
+            "Target": 3,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "1"
+            ]
+          },
+          {
+            "Source": 2,
+            "Target": 7,
+            "x": 20,
+            "y": 20,
+            "Labels": [
+              "0"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 3,
+        "Name": "C",
+        "x": 470,
+        "y": 150,
+        "Final": true,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 3,
+            "Target": 3,
+            "x": 0,
+            "y": -150,
+            "Labels": [
+              "1"
+            ]
+          },
+          {
+            "Source": 3,
+            "Target": 1,
+            "x": 0,
+            "y": -60,
+            "Labels": [
+              "0"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 4,
+        "Name": "D,F",
+        "x": 650,
+        "y": 160,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 4,
+            "Target": 3,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "0"
+            ]
+          },
+          {
+            "Source": 4,
+            "Target": 7,
+            "x": 0,
+            "y": 30,
+            "Labels": [
+              "1"
+            ]
+          }
+        ],
+        "Start": false
+      },
+      {
+        "ID": 7,
+        "Name": "G",
+        "x": 480,
+        "y": 320,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 7,
+            "Target": 7,
+            "x": -20,
+            "y": 80,
+            "Labels": [
+              "0"
+            ]
+          },
+          {
+            "Source": 7,
+            "Target": 1,
+            "x": 0,
+            "y": 0,
+            "Labels": [
+              "1"
+            ]
+          }
+        ],
+        "Start": false
+      }
+    ],
+    "lastInputs": []
+  },
+  "GUID": "i27uzqqi6"
+}
