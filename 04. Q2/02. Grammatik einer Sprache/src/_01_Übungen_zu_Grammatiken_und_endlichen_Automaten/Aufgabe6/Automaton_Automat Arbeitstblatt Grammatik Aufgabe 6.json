@@ -1,0 +1,39 @@
+﻿{
+  "name": "Automat Arbeitstblatt Grammatik Aufgabe 6",
+  "description": "",
+  "type": "DEA",
+  "automaton": {
+    "acceptCache": [],
+    "simulationInput": [],
+    "Alphabet": [
+      "ab"
+    ],
+    "StackAlphabet": [
+      "|"
+    ],
+    "States": [
+      {
+        "ID": 1,
+        "Name": "X",
+        "x": 150,
+        "y": 150,
+        "Final": true,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 1,
+            "Target": 1,
+            "x": 230,
+            "y": 50,
+            "Labels": [
+              "ab"
+            ]
+          }
+        ],
+        "Start": true
+      }
+    ],
+    "lastInputs": []
+  },
+  "GUID": "pu1dxs1sv"
+}

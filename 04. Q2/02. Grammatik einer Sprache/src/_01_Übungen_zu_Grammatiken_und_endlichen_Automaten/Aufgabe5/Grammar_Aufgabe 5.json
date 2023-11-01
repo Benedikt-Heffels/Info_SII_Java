@@ -1,0 +1,99 @@
+﻿{
+  "name": "Aufgabe 5",
+  "description": "",
+  "language": "L",
+  "grammar": {
+    "bnf": [
+      {
+        "name": "S",
+        "rhs": [
+          [
+            [
+              {
+                "name": "a",
+                "type": "t"
+              },
+              {
+                "name": "T",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"S\", Nodes:[ {Content:\"a\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "b",
+                "type": "t"
+              },
+              {
+                "name": "S",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"S\", Nodes:[ {Content:\"b\", Nodes:[]},$2 ] };"
+          ]
+        ]
+      },
+      {
+        "name": "T",
+        "rhs": [
+          [
+            [
+              {
+                "name": "a",
+                "type": "t"
+              },
+              {
+                "name": "T",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"T\", Nodes:[ {Content:\"a\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "b",
+                "type": "t"
+              },
+              {
+                "name": "S",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"T\", Nodes:[ {Content:\"b\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [],
+            "$$ = {Content:\"T\", Nodes:[ {Content:\"EPSILON\", Nodes:[]} ] };"
+          ]
+        ]
+      }
+    ],
+    "inputText": "S -> a T | b S\nT -> a T | b S | EPSILON",
+    "testInput": "aaabaa",
+    "lastInput": [
+      "aaabaa",
+      "a",
+      "aa"
+    ],
+    "lex": {
+      "rules": [
+        {
+          "expression": "a",
+          "name": "a"
+        },
+        {
+          "expression": "b",
+          "name": "b"
+        },
+        {
+          "expression": "[\\t\\r\\n\\s]",
+          "name": "IGNORE"
+        }
+      ]
+    }
+  },
+  "text": "S -> a T | b S\nT -> a T | b S | EPSILON"
+}

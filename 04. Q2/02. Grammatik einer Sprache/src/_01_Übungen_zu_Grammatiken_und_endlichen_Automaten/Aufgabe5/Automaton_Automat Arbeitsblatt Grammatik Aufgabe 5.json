@@ -1,0 +1,78 @@
+﻿{
+  "name": "Automat Arbeitsblatt Grammatik Aufgabe 5",
+  "description": "",
+  "type": "DEA",
+  "automaton": {
+    "acceptCache": [],
+    "simulationInput": [],
+    "Alphabet": [
+      "a",
+      "b"
+    ],
+    "StackAlphabet": [
+      "|"
+    ],
+    "States": [
+      {
+        "ID": 1,
+        "Name": "S",
+        "x": 150,
+        "y": 150,
+        "Final": false,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 1,
+            "Target": 2,
+            "x": 50,
+            "y": 0,
+            "Labels": [
+              "a"
+            ]
+          },
+          {
+            "Source": 1,
+            "Target": 1,
+            "x": -10,
+            "y": 230,
+            "Labels": [
+              "b"
+            ]
+          }
+        ],
+        "Start": true
+      },
+      {
+        "ID": 2,
+        "Name": "T",
+        "x": 350,
+        "y": 150,
+        "Final": true,
+        "Radius": 30,
+        "Transitions": [
+          {
+            "Source": 2,
+            "Target": 1,
+            "x": 50,
+            "y": 0,
+            "Labels": [
+              "b"
+            ]
+          },
+          {
+            "Source": 2,
+            "Target": 2,
+            "x": 180,
+            "y": -30,
+            "Labels": [
+              "a"
+            ]
+          }
+        ],
+        "Start": false
+      }
+    ],
+    "lastInputs": []
+  },
+  "GUID": "hpomnrnzv"
+}

@@ -1,0 +1,100 @@
+﻿{
+  "name": "Aufgabe 2",
+  "description": "",
+  "language": "L",
+  "grammar": {
+    "bnf": [
+      {
+        "name": "z0",
+        "rhs": [
+          [
+            [
+              {
+                "name": "a",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"a\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "b",
+                "type": "t"
+              },
+              {
+                "name": "z0",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"b\", Nodes:[]},$2 ] };"
+          ]
+        ]
+      },
+      {
+        "name": "z1",
+        "rhs": [
+          [
+            [
+              {
+                "name": "a",
+                "type": "t"
+              },
+              {
+                "name": "z0",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"a\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "b",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"b\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"EPSILON\", Nodes:[]} ] };"
+          ]
+        ]
+      }
+    ],
+    "inputText": "z0 -> a z1 | b z0\nz1 -> a z0 | b z1 | EPSILON",
+    "testInput": "aba",
+    "lastInput": [
+      "aba",
+      "abaabb",
+      "abaa",
+      "abaab"
+    ],
+    "lex": {
+      "rules": [
+        {
+          "expression": "a",
+          "name": "a"
+        },
+        {
+          "expression": "b",
+          "name": "b"
+        },
+        {
+          "expression": "[\\t\\r\\n\\s]",
+          "name": "IGNORE"
+        }
+      ]
+    }
+  },
+  "text": "z0 -> a z1 | b z0\nz1 -> a z0 | b z1 | EPSILON"
+}

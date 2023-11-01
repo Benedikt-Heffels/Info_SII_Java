@@ -1,0 +1,624 @@
+﻿{
+  "name": "Aufgabe1",
+  "description": "",
+  "language": "L",
+  "grammar": {
+    "bnf": [
+      {
+        "name": "z0",
+        "rhs": [
+          [
+            [
+              {
+                "name": "1",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"1\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "2",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"2\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "3",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"3\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "4",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"4\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "5",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"5\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "6",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"6\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "7",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"7\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "8",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"8\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "9",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"9\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "0",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"0\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "+",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"+\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "-",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\"-\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": ".",
+                "type": "t"
+              },
+              {
+                "name": "z5",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z0\", Nodes:[ {Content:\".\", Nodes:[]},$2 ] };"
+          ]
+        ]
+      },
+      {
+        "name": "z1",
+        "rhs": [
+          [
+            [
+              {
+                "name": "1",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"1\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "2",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"2\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "3",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"3\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "4",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"4\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "5",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"5\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "6",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"6\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "7",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"7\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "8",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"8\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "9",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"9\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "0",
+                "type": "t"
+              },
+              {
+                "name": "z1",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"0\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "+",
+                "type": "t"
+              },
+              {
+                "name": "z5",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"+\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "-",
+                "type": "t"
+              },
+              {
+                "name": "z5",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"-\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": ".",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\".\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [],
+            "$$ = {Content:\"z1\", Nodes:[ {Content:\"EPSILON\", Nodes:[]} ] };"
+          ]
+        ]
+      },
+      {
+        "name": "z2",
+        "rhs": [
+          [
+            [
+              {
+                "name": "1",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"1\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "2",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"2\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "3",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"3\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "4",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"4\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "5",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"5\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "6",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"6\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "7",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"7\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "8",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"8\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "9",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"9\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "0",
+                "type": "t"
+              },
+              {
+                "name": "z2",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"0\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "+",
+                "type": "t"
+              },
+              {
+                "name": "z5",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"+\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": "-",
+                "type": "t"
+              },
+              {
+                "name": "z5",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"-\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [
+              {
+                "name": ".",
+                "type": "t"
+              },
+              {
+                "name": "z5",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\".\", Nodes:[]},$2 ] };"
+          ],
+          [
+            [],
+            "$$ = {Content:\"z2\", Nodes:[ {Content:\"EPSILON\", Nodes:[]} ] };"
+          ]
+        ]
+      },
+      {
+        "name": "z5",
+        "rhs": [
+          [
+            [
+              {
+                "name": "z5",
+                "type": "nt"
+              }
+            ],
+            "$$ = {Content:\"z5\", Nodes:[ $1 ] };"
+          ]
+        ]
+      }
+    ],
+    "inputText": "z0 -> 1 z1 | 2 z1 | 3 z1 | 4 z1 | 5 z1 | 6 z1 | 7 z1 | 8 z1 | 9 z1 | 0 z1 | + z1 | - z1 | . z5\nz1 -> 1 z1 | 2 z1 | 3 z1 | 4 z1 | 5 z1 | 6 z1 | 7 z1 | 8 z1 | 9 z1 | 0 z1 | + z5 | - z5 | . z2 | EPSILON\nz2 -> 1 z2 | 2 z2 | 3 z2 | 4 z2 | 5 z2 | 6 z2 | 7 z2 | 8 z2 | 9 z2 | 0 z2 | + z5 | - z5 | . z5 | EPSILON\nz5 -> z5",
+    "testInput": ".25",
+    "lastInput": [
+      ".25",
+      "115154",
+      "+11.25.3",
+      "+11.25",
+      "a11.25",
+      "p11.25"
+    ],
+    "lex": {
+      "rules": [
+        {
+          "expression": "1",
+          "name": "1"
+        },
+        {
+          "expression": "2",
+          "name": "2"
+        },
+        {
+          "expression": "3",
+          "name": "3"
+        },
+        {
+          "expression": "4",
+          "name": "4"
+        },
+        {
+          "expression": "5",
+          "name": "5"
+        },
+        {
+          "expression": "6",
+          "name": "6"
+        },
+        {
+          "expression": "7",
+          "name": "7"
+        },
+        {
+          "expression": "8",
+          "name": "8"
+        },
+        {
+          "expression": "9",
+          "name": "9"
+        },
+        {
+          "expression": "0",
+          "name": "0"
+        },
+        {
+          "expression": "\\+",
+          "name": "+"
+        },
+        {
+          "expression": "\\-",
+          "name": "-"
+        },
+        {
+          "expression": "\\.",
+          "name": "."
+        },
+        {
+          "expression": "[\\t\\r\\n\\s]",
+          "name": "IGNORE"
+        }
+      ]
+    }
+  },
+  "text": "z0 -> 1 z1 | 2 z1 | 3 z1 | 4 z1 | 5 z1 | 6 z1 | 7 z1 | 8 z1 | 9 z1 | 0 z1 | + z1 | - z1 | . z5\nz1 -> 1 z1 | 2 z1 | 3 z1 | 4 z1 | 5 z1 | 6 z1 | 7 z1 | 8 z1 | 9 z1 | 0 z1 | + z5 | - z5 | . z2 | EPSILON\nz2 -> 1 z2 | 2 z2 | 3 z2 | 4 z2 | 5 z2 | 6 z2 | 7 z2 | 8 z2 | 9 z2 | 0 z2 | + z5 | - z5 | . z5 | EPSILON\nz5 -> z5"
+}
