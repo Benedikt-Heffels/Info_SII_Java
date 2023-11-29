@@ -21,7 +21,7 @@ public class MinSort_Korrigiert extends Frame {
     int x, zweiY, paragraph; //"identifier" expected: § kein Variablenname, Variablennamen muss mit Buchstaben beginnen (nicht 2y)
     // Ende Attribute
 
-    public minsort_korrigiert(String title) { // <- METHODENAUFRUF LÖST NOCH FEHLER AUS
+    public minsort_korrigiert(String title) { // <- METHODENAUFRUF LÖST NOCH FEHLER AUS, auf fehlerhaftes NumberField zurrückzuführen
         // Frame-Initialisierung
         super(title);
         addWindowListener(new WindowAdapter() {
